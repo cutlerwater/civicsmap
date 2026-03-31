@@ -38,16 +38,16 @@ export default function USMap() {
                   }}
                   style={{
                     default: {
-                      fill: state ? "#cbd5f5" : "#e5e7eb",
+                      fill: state ? "#aabbbb" : "#e5e7eb",
                       outline: "none",
                     },
                     hover: {
-                      fill: "#3b82f6",
+                      fill: "#cc0000",
                       outline: "none",
                       cursor: "pointer",
                     },
                     pressed: {
-                      fill: "#1d4ed8",
+                      fill: "#dd0000",
                       outline: "none",
                     },
                   }}
