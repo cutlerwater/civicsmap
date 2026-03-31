@@ -1895,7 +1895,7 @@ pennsylvania: {
     party: "Republican",
     website: "https://gov.louisiana.gov/",
     contactUrl: "https://gov.louisiana.gov/page/contact",
-    photoUrl: "",
+    photoUrl: "https://en.wikipedia.org/wiki/Jeff_Landry#/media/File:Jeff_Landry_2025.jpg",
   },
 
   senators: [
