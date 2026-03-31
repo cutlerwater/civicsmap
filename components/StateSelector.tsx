@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { states } from "@/lib/states";
+import { allStates } from "@/lib/data"; // 👈 HERE
 
 export default function StateSelector() {
   const router = useRouter();
@@ -30,7 +30,7 @@ export default function StateSelector() {
           Choose a state
         </option>
 
-        {states.map((state) => (
+        {allStates.map((state) => (
           <option key={state.slug} value={state.slug}>
             {state.name}
           </option>

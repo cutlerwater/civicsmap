@@ -669,7 +669,7 @@ pennsylvania: {
     },
   ],
 },
-westvirginia: {
+"west-virginia": {
   name: "West Virginia",
   slug: "west-virginia",
   abbreviation: "WV",
@@ -3217,7 +3217,10 @@ westvirginia: {
 };
 
 
+export const getState = (slug: string) => {
+  return stateOfficials[slug] ?? null;
+};
 
-
-
-export const getState = (slug: string) => stateOfficials[slug];
+export const allStates = Object.values(stateOfficials).sort((a, b) =>
+  a.name.localeCompare(b.name)
+);
