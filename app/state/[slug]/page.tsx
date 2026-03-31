@@ -1,6 +1,6 @@
 import OfficialCard from "@/components/OfficialCard";
-import { stateOfficials } from "@/lib/data";
-import { notFound } from "next/navigation";
+import { getState } from "@/lib/data";
+
 
 type Props = {
   params: Promise<{
@@ -10,7 +10,7 @@ type Props = {
 
 export default async function StatePage({ params }: Props) {
   const { slug } = await params;
-  const data = stateOfficials[slug];
+  const data = getState(slug);
 
   if (!data) {
   return (
@@ -19,7 +19,7 @@ export default async function StatePage({ params }: Props) {
         State not available yet
       </h1>
       <p className="mt-4 text-slate-600">
-        We're still adding data for this state. Try Maryland or Delaware for now.
+        We're still adding data for this state.
       </p>
     </main>
   );

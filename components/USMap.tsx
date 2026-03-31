@@ -1,63 +1,54 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { states } from "@/lib/states";
 
 type StateShape = {
-  name: string;
   slug: string;
   path: string;
+  labelX: number;
+  labelY: number;
 };
 
-const states: StateShape[] = [
+const stateShapes: StateShape[] = [
   {
-    name: "Pennsylvania",
-    slug: "pennsylvania",
-    path: "M250 120 L340 120 L350 165 L260 170 Z",
-  },
-  {
-    name: "Maryland",
     slug: "maryland",
     path: "M300 180 L370 175 L385 195 L315 205 L290 193 Z",
+    labelX: 314,
+    labelY: 192,
   },
   {
-    name: "Virginia",
     slug: "virginia",
     path: "M260 210 L380 215 L395 250 L290 255 L245 230 Z",
+    labelX: 282,
+    labelY: 237,
   },
   {
-    name: "Delaware",
     slug: "delaware",
     path: "M380 165 L395 165 L402 210 L388 212 Z",
+    labelX: 382,
+    labelY: 192,
   },
   {
-    name: "New York",
-    slug: "new-york",
-    path: "M250 40 L340 45 L360 95 L285 105 L235 75 Z",
-  },
-  {
-    name: "West Virginia",
-    slug: "west-virginia",
-    path: "M220 170 L280 175 L285 225 L235 230 L205 200 Z",
-  },
-  {
-    name: "Ohio",
-    slug: "ohio",
-    path: "M170 120 L235 120 L245 195 L175 195 L160 155 Z",
-  },
-  {
-    name: "North Carolina",
-    slug: "north-carolina",
-    path: "M310 260 L430 262 L445 285 L325 292 L290 275 Z",
-  },
-  {
-    name: "New Jersey",
-    slug: "new-jersey",
-    path: "M355 125 L375 128 L378 175 L360 175 Z",
+    slug: "pennsylvania",
+    path: "M250 120 L360 120 L370 170 L270 180 L240 150 Z",
+    labelX: 300,
+    labelY: 150,
   },
 ];
 
 export default function USMap() {
   const router = useRouter();
+
+  const mappedStates = stateShapes.map((shape) => {
+    const state = states.find((s) => s.slug === shape.slug);
+
+    return {
+      ...shape,
+      name: state?.name ?? shape.slug,
+      abbreviation: state?.abbreviation ?? "",
+    };
+  });
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -72,17 +63,13 @@ export default function USMap() {
         <text
           x="32"
           y="42"
-          className="fill-slate-700 text-[20px] font-semibold"
+          className="fill-slate-700 text-[24px] font-semibold"
         >
           Select a state
         </text>
 
-        <text
-          x="32"
-          y="68"
-          className="fill-slate-500 text-[12px]"
-        >
-          Maryland is ready now. Other states can be added next.
+        <text x="32" y="68" className="fill-slate-500 text-[18px]">
+          Choose a state from the map or dropdown.
         </text>
 
         <g transform="translate(80,40) scale(1.45)">
@@ -95,7 +82,7 @@ export default function USMap() {
             className="fill-blue-50 stroke-slate-200"
           />
 
-          {states.map((state) => (
+          {mappedStates.map((state) => (
             <g
               key={state.slug}
               onClick={() => router.push(`/state/${state.slug}`)}
@@ -105,36 +92,15 @@ export default function USMap() {
                 d={state.path}
                 className="fill-slate-300 stroke-slate-600 stroke-[2] transition duration-200 hover:fill-blue-500 hover:drop-shadow-md"
               />
+              <text
+                x={state.labelX}
+                y={state.labelY}
+                className="pointer-events-none fill-slate-900 text-[10px] font-medium"
+              >
+                {state.abbreviation}
+              </text>
             </g>
           ))}
-
-          <text x="278" y="148" className="pointer-events-none fill-slate-900 text-[10px] font-medium">
-            Pennsylvania
-          </text>
-          <text x="314" y="192" className="pointer-events-none fill-slate-900 text-[10px] font-medium">
-            Maryland
-          </text>
-          <text x="282" y="237" className="pointer-events-none fill-slate-900 text-[10px] font-medium">
-            Virginia
-          </text>
-          <text x="382" y="192" className="pointer-events-none fill-slate-900 text-[9px] font-medium">
-            DE
-          </text>
-          <text x="273" y="74" className="pointer-events-none fill-slate-900 text-[10px] font-medium">
-            New York
-          </text>
-          <text x="214" y="202" className="pointer-events-none fill-slate-900 text-[9px] font-medium">
-            WV
-          </text>
-          <text x="182" y="157" className="pointer-events-none fill-slate-900 text-[10px] font-medium">
-            Ohio
-          </text>
-          <text x="330" y="280" className="pointer-events-none fill-slate-900 text-[9px] font-medium">
-            North Carolina
-          </text>
-          <text x="356" y="150" className="pointer-events-none fill-slate-900 text-[9px] font-medium">
-            NJ
-          </text>
         </g>
       </svg>
     </div>
