@@ -40,12 +40,12 @@ export default function USMap() {
                       outline: "none",
                     },
                     hover: {
-                      fill: state ? "#3b82f6" : "#e5e7eb",
+                      fill: state ? "#bb0000" : "#ffe7eb",
                       outline: "none",
                       cursor: state ? "pointer" : "not-allowed",
                     },
                     pressed: {
-                      fill: "#1d4ed8",
+                      fill: "#ff0000",
                       outline: "none",
                     },
                   }}
