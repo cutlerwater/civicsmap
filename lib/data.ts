@@ -15,7 +15,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://governor.maryland.gov/",
       contactUrl: "https://governor.maryland.gov/contact-us/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Wes_Moore_2023.jpg",
     },
     senators: [
       {
@@ -28,7 +28,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.vanhollen.senate.gov/",
         contactUrl: "https://www.vanhollen.senate.gov/contact/email",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Chris_Van_Hollen_official_portrait.jpg",
       },
       {
         id: "md-sen-2",
@@ -40,7 +40,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.alsobrooks.senate.gov/",
         contactUrl: "https://www.alsobrooks.senate.gov/contact/",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Angela_Alsobrooks_2024.jpg",
       },
     ],
     representatives: [
@@ -164,23 +164,11 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://governor.delaware.gov/",
       contactUrl: "https://governor.delaware.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Matt_Meyer.jpg",
     },
     senators: [
       {
         id: "de-sen-1",
-        name: "Lisa Blunt Rochester",
-        title: "U.S. Senator",
-        state: "Delaware",
-        stateSlug: "delaware",
-        chamber: "senate",
-        party: "Democratic",
-        website: "https://www.bluntrochester.senate.gov/",
-        contactUrl: "https://www.bluntrochester.senate.gov/contact/",
-        photoUrl: "",
-      },
-      {
-        id: "de-sen-2",
         name: "Chris Coons",
         title: "U.S. Senator",
         state: "Delaware",
@@ -189,8 +177,21 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.coons.senate.gov/",
         contactUrl: "https://www.coons.senate.gov/contact/share-your-opinion",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chris_Coons_official_portrait.jpg",
       },
+      {
+        id: "de-sen-2",
+        name: "Lisa Blunt Rochester",
+        title: "U.S. Senator",
+        state: "Delaware",
+        stateSlug: "delaware",
+        chamber: "senate",
+        party: "Democratic",
+        website: "https://www.bluntrochester.senate.gov/",
+        contactUrl: "https://www.bluntrochester.senate.gov/contact/",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Lisa_Blunt_Rochester_official_portrait.jpg",
+      },
+      
     ],
     representatives: [
       {
@@ -204,7 +205,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://mcbride.house.gov/",
         contactUrl: "https://mcbride.house.gov/contact/",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sarah_McBride_2023.jpg",
       },
     ],
   },
@@ -237,7 +238,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://www.warner.senate.gov/",
       contactUrl: "https://www.warner.senate.gov/public/index.cfm?p=Contact",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Mark_Warner_official_portrait.jpg",
     },
     {
       id: "va-sen-2",
@@ -249,7 +250,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://www.kaine.senate.gov/",
       contactUrl: "https://www.kaine.senate.gov/contact",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tim_Kaine_official_portrait.jpg",
     },
   ],
 

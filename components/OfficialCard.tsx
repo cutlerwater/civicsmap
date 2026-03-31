@@ -6,30 +6,47 @@ type Props = {
 
 export default function OfficialCard({ official }: Props) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-md transition">
       <div className="mb-4 flex items-start gap-4">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-200 text-lg font-bold text-slate-700">
-          {official.name
-            .split(" ")
-            .map((part) => part[0])
-            .join("")
-            .slice(0, 2)}
-        </div>
+        {/* PHOTO */}
+        {official.photoUrl ? (
+          <img
+            src={official.photoUrl}
+            alt={official.name}
+            className="h-16 w-16 rounded-full object-cover border border-slate-200"
+          />
+        ) : (
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-200 text-lg font-bold text-slate-700">
+            {official.name
+              .split(" ")
+              .map((part) => part[0])
+              .join("")
+              .slice(0, 2)}
+          </div>
+        )}
 
+        {/* INFO */}
         <div>
           <h3 className="text-lg font-semibold text-slate-900">
             {official.name}
           </h3>
           <p className="text-sm text-slate-600">{official.title}</p>
+
           {official.party && (
-            <p className="mt-1 text-sm text-slate-500">{official.party}</p>
+            <p className="mt-1 text-sm text-slate-500">
+              {official.party}
+            </p>
           )}
+
           {official.district && (
-            <p className="text-sm text-slate-500">{official.district}</p>
+            <p className="text-sm text-slate-500">
+              {official.district}
+            </p>
           )}
         </div>
       </div>
 
+      {/* BUTTONS */}
       <div className="flex flex-wrap gap-3">
         {official.website && (
           <a
