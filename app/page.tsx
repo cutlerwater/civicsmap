@@ -15,7 +15,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-5 max-w-xl text-lg text-slate-600">
-            Start with a state-level view of your governor, U.S. senators, and
+            Start with a state-level view of your Governor, U.S. senators, and
             members of Congress.
           </p>
 
