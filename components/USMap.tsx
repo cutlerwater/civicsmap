@@ -36,7 +36,7 @@ export default function USMap() {
                   }}
                   style={{
                     default: {
-                      fill: state ? "#c7d2fe" : "#e5e7eb",
+                      fill: state ? "#696969" : "#ff33cc",
                       outline: "none",
                     },
                     hover: {
