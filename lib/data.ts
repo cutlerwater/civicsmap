@@ -1895,7 +1895,7 @@ pennsylvania: {
     party: "Republican",
     website: "https://gov.louisiana.gov/",
     contactUrl: "https://gov.louisiana.gov/page/contact",
-    photoUrl: "https://en.wikipedia.org/wiki/Jeff_Landry#/media/File:Jeff_Landry_2025.jpg",
+    photoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Jeff_Landry_2025.jpg",
   },
 
   senators: [
@@ -1909,7 +1909,7 @@ pennsylvania: {
       party: "Republican",
       website: "https://www.kennedy.senate.gov/",
       contactUrl: "https://www.kennedy.senate.gov/public/email-me-form",
-      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Jeff_Landry_2025.jpg",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/John_Kennedy%2C_official_portrait%2C_115th_Congress_%28cropped%29.jpg",
     },
     {
       id: "la-sen-2",
