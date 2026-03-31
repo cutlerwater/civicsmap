@@ -15,7 +15,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://governor.maryland.gov/",
       contactUrl: "https://governor.maryland.gov/contact-us/",
-      photoUrl: "https://en.wikipedia.org/wiki/Wes_Moore#/media/File:Wes_Moore_Official_Governor_Portrait.jpg",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Wes_Moore_Official_Governor_Portrait.jpg",
     },
     senators: [
       {
@@ -28,7 +28,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.vanhollen.senate.gov/",
         contactUrl: "https://www.vanhollen.senate.gov/contact/email",
-        photoUrl: "https://en.wikipedia.org/wiki/Chris_Van_Hollen#/media/File:Chris_Van_Hollen_official_portrait_115th_Congress.jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Chris_Van_Hollen_official_portrait_115th_Congress.jpg",
       },
       {
         id: "md-sen-2",
@@ -40,7 +40,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.alsobrooks.senate.gov/",
         contactUrl: "https://www.alsobrooks.senate.gov/contact/",
-        photoUrl: "https://en.wikipedia.org/wiki/Angela_Alsobrooks#/media/File:Sen._Angela_Alsobrooks_official_Senate_photo,_119th_Congress.jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Sen._Angela_Alsobrooks_official_Senate_photo%2C_119th_Congress.jpg",
       },
     ],
     representatives: [
@@ -55,7 +55,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Republican",
         website: "https://harris.house.gov/",
         contactUrl: "https://harris.house.gov/contact",
-        photoUrl: "https://en.wikipedia.org/wiki/Andy_Harris_(politician)#/media/File:Andy_Harris_115th_Congress_Higher_dif_(cropped).jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Andy_Harris_115th_Congress_Higher_dif_%28cropped%29.jpg",
       },
       {
         id: "md-rep-2",
@@ -68,7 +68,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://olszewski.house.gov/",
         contactUrl: "https://olszewski.house.gov/contact/",
-        photoUrl: "https://en.wikipedia.org/wiki/Johnny_Olszewski#/media/File:Johnny_Olszewski_119th_congress.jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/66/Johnny_Olszewski_119th_congress.jpg",
       },
       {
         id: "md-rep-3",
@@ -81,7 +81,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://elfreth.house.gov/",
         contactUrl: "https://elfreth.house.gov/address_authentication?form=/contact",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Representative_Sarah_Elfreth_Official_Portrait.jpg",
       },
       {
         id: "md-rep-4",
@@ -94,7 +94,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://ivey.house.gov/",
         contactUrl: "https://ivey.house.gov/address_authentication?form=/contact",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Rep._Glenn_Ivey_official_portrait%2C_118th_Congress.jpg",
       },
       {
         id: "md-rep-5",
@@ -107,7 +107,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://hoyer.house.gov/",
         contactUrl: "https://hoyer.house.gov/address_authentication?form=/contact",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/73/Steny_Hoyer_116th_Congress.jpg",
       },
       {
         id: "md-rep-6",
@@ -120,7 +120,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://mcclaindelaney.house.gov/",
         contactUrl: "https://delaney.house.gov/address_authentication?form=/contact",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/30/Rep._April_McClain_Delaney_Official_Portrait.jpg",
       },
       {
         id: "md-rep-7",
@@ -133,7 +133,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://mfume.house.gov/",
         contactUrl: "https://mfume.house.gov/address_authentication?form=/contact",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Maryland_Congressman_Kweisi_Mfume%2C_117th_Congress.jpg",
       },
       {
         id: "md-rep-8",
@@ -146,7 +146,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://raskin.house.gov/",
         contactUrl: "https://raskin.house.gov/address_authentication?form=/contact",
-        photoUrl: "",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Jamie_Raskin_Official_Portrait_2019.jpg",
       }
     ],
   },
@@ -164,7 +164,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://governor.delaware.gov/",
       contactUrl: "https://governor.delaware.gov/contact/",
-      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Matt_Meyer.jpg",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a6/%2802-19-2025%29_Matt_Meyer.jpg",
     },
     senators: [
       {
@@ -177,7 +177,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.coons.senate.gov/",
         contactUrl: "https://www.coons.senate.gov/contact/share-your-opinion",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chris_Coons_official_portrait.jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/20/Chris_Coons_2024.jpg",
       },
       {
         id: "de-sen-2",
@@ -189,7 +189,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.bluntrochester.senate.gov/",
         contactUrl: "https://www.bluntrochester.senate.gov/contact/",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Lisa_Blunt_Rochester_official_portrait.jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/Senator_Blunt_Rochester_Official_Portrait.jpg",
       },
       
     ],
@@ -205,7 +205,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://mcbride.house.gov/",
         contactUrl: "https://mcbride.house.gov/contact/",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sarah_McBride_2023.jpg",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Representative_Sarah_McBride_Official_Portrait.jpg",
       },
     ],
   },
@@ -238,7 +238,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://www.warner.senate.gov/",
       contactUrl: "https://www.warner.senate.gov/public/index.cfm?p=Contact",
-      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Mark_Warner_official_portrait.jpg",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/16/Mark_Warner_2025.jpg",
     },
     {
       id: "va-sen-2",
@@ -250,7 +250,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://www.kaine.senate.gov/",
       contactUrl: "https://www.kaine.senate.gov/contact",
-      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tim_Kaine_official_portrait.jpg",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/01/Tim_Kaine%2C_official_portrait_%28119th_Congress%29.jpg",
     },
   ],
 
@@ -266,7 +266,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Republican",
       website: "https://wittman.house.gov/",
       contactUrl: "https://wittman.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Rob_Wittman_official_portrait%2C_118th_Congress_%28cropped%29.jpg",
     },
     {
       id: "va-rep-2",
@@ -279,7 +279,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Republican",
       website: "https://kiggans.house.gov/",
       contactUrl: "https://kiggans.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/36/Kiggans_Jen_118th_Congress.jpg",
     },
     {
       id: "va-rep-3",
@@ -292,7 +292,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://bobbyscott.house.gov/",
       contactUrl: "https://bobbyscott.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b5/BobbyScott.jpg",
     },
     {
       id: "va-rep-4",
@@ -305,7 +305,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://mcclellan.house.gov/",
       contactUrl: "https://mcclellan.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bf/U.S._Rep._Jennifer_McClellan_-_118th_Congress.jpg",
     },
     {
       id: "va-rep-5",
@@ -318,7 +318,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Republican",
       website: "https://good.house.gov/",
       contactUrl: "https://good.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Bob_Good_117th_U.S_Congress.jpg",
     },
     {
       id: "va-rep-6",
@@ -331,7 +331,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Republican",
       website: "https://cline.house.gov/",
       contactUrl: "https://cline.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Rep_Ben_Cline_Official_Photo_119th_Congress.jpg",
     },
     {
       id: "va-rep-7",
@@ -344,7 +344,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://vindman.house.gov/",
       contactUrl: "https://vindman.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Representative_Eugene_Vindman_Official_Portrait.jpg",
     },
     {
       id: "va-rep-8",
@@ -357,7 +357,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://beyer.house.gov/",
       contactUrl: "https://beyer.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/72/Rep._Don_Beyer%2C_official_portrait_%28118th_Congress%29.jpg",
     },
     {
       id: "va-rep-9",
@@ -370,7 +370,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Republican",
       website: "https://griffith.house.gov/",
       contactUrl: "https://griffith.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/39/H._Morgan_Griffith_119th_Congress.jpg",
     },
     {
       id: "va-rep-10",
@@ -383,7 +383,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://subramanyam.house.gov/",
       contactUrl: "https://subramanyam.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/Subramayam_Suhas_119th_Congress_2.jpg",
     },
     {
       id: "va-rep-11",
@@ -396,7 +396,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://connolly.house.gov/",
       contactUrl: "https://connolly.house.gov/contact/",
-      photoUrl: "",
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Gerry_Connolly_official_portrait_2022_%28cropped%29.jpg",
     },
   ],
 },
