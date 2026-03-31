@@ -15,7 +15,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
       party: "Democratic",
       website: "https://governor.maryland.gov/",
       contactUrl: "https://governor.maryland.gov/contact-us/",
-      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Wes_Moore_2023.jpg",
+      photoUrl: "https://en.wikipedia.org/wiki/Wes_Moore#/media/File:Wes_Moore_Official_Governor_Portrait.jpg",
     },
     senators: [
       {
@@ -28,7 +28,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.vanhollen.senate.gov/",
         contactUrl: "https://www.vanhollen.senate.gov/contact/email",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Chris_Van_Hollen_official_portrait.jpg",
+        photoUrl: "https://en.wikipedia.org/wiki/Chris_Van_Hollen#/media/File:Chris_Van_Hollen_official_portrait_115th_Congress.jpg",
       },
       {
         id: "md-sen-2",
@@ -40,7 +40,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://www.alsobrooks.senate.gov/",
         contactUrl: "https://www.alsobrooks.senate.gov/contact/",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Angela_Alsobrooks_2024.jpg",
+        photoUrl: "https://en.wikipedia.org/wiki/Angela_Alsobrooks#/media/File:Sen._Angela_Alsobrooks_official_Senate_photo,_119th_Congress.jpg",
       },
     ],
     representatives: [
@@ -55,7 +55,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Republican",
         website: "https://harris.house.gov/",
         contactUrl: "https://harris.house.gov/contact",
-        photoUrl: "",
+        photoUrl: "https://en.wikipedia.org/wiki/Andy_Harris_(politician)#/media/File:Andy_Harris_115th_Congress_Higher_dif_(cropped).jpg",
       },
       {
         id: "md-rep-2",
@@ -68,7 +68,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         party: "Democratic",
         website: "https://olszewski.house.gov/",
         contactUrl: "https://olszewski.house.gov/contact/",
-        photoUrl: "",
+        photoUrl: "https://en.wikipedia.org/wiki/Johnny_Olszewski#/media/File:Johnny_Olszewski_119th_congress.jpg",
       },
       {
         id: "md-rep-3",
@@ -224,7 +224,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
     party: "Democratic",
     website: "https://www.governor.virginia.gov/",
     contactUrl: "https://www.governor.virginia.gov/communicating-with-the-governors-office/",
-    photoUrl: "",
+    photoUrl: "https://www.governor.virginia.gov/media/governorvirginiagov/governor-of-virginia/images/Governor-Spanberger-Official-Portrait.jpg",
   },
 
   senators: [
