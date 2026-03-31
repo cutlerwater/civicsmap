@@ -215,12 +215,12 @@ export const stateOfficials: Record<string, StateOfficials> = {
 
   governor: {
     id: "va-governor",
-    name: "Governor Glenn Youngkin",
+    name: "Governor Abigail Spanberger",
     title: "Governor",
     state: "Virginia",
     stateSlug: "virginia",
     chamber: "executive",
-    party: "Republican",
+    party: "Democratic",
     website: "https://www.governor.virginia.gov/",
     contactUrl: "https://www.governor.virginia.gov/communicating-with-the-governors-office/",
     photoUrl: "",
