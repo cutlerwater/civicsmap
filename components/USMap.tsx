@@ -103,7 +103,7 @@ export default function USMap() {
             >
               <path
                 d={state.path}
-                className="fill-slate-300 stroke-slate-600 stroke-[2] transition hover:fill-blue-500"
+                className="fill-slate-300 stroke-slate-600 stroke-[2] transition duration-200 hover:fill-blue-500 hover:drop-shadow-md"
               />
             </g>
           ))}

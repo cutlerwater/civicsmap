@@ -19,7 +19,7 @@ export default async function StatePage({ params }: Props) {
         State not available yet
       </h1>
       <p className="mt-4 text-slate-600">
-        We're still adding data for this state. Try Maryland for now.
+        We're still adding data for this state. Try Maryland or Delaware for now.
       </p>
     </main>
   );
