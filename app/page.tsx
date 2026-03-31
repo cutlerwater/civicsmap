@@ -2,8 +2,8 @@ import USMap from "@/components/USMap";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-12">
-      <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
+    <main className="min-h-screen mx-auto max-w-7xl px-6 py-12">
+      <section className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
         <div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-500">
             State Lookup

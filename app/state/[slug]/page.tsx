@@ -14,7 +14,7 @@ export default async function StatePage({ params }: Props) {
 
   if (!data) {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-12">
+    <main className="min-h-screen mx-auto max-w-7xl px-6 py-12">
       <h1 className="text-3xl font-bold text-slate-900">
         State not available yet
       </h1>
