@@ -19,13 +19,11 @@ export default function USMap() {
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
       <ComposableMap projection="geoAlbersUsa">
         <Geographies geography={geoUrl}>
-          {({ geographies }) =>
-            geographies.map((geo) => {
+          {({ geographies }: { geographies: any[] }) =>
+            geographies.map((geo: any) => {
               const stateName = geo.properties.name;
 
-              const state = allStates.find(
-                (s) => s.name === stateName
-              );
+              const state = allStates.find((s) => s.name === stateName);
 
               return (
                 <Geography
@@ -38,16 +36,16 @@ export default function USMap() {
                   }}
                   style={{
                     default: {
-                      fill: state ? "#aabbbb" : "#e5e7eb",
+                      fill: state ? "#c7d2fe" : "#e5e7eb",
                       outline: "none",
                     },
                     hover: {
-                      fill: "#cc0000",
+                      fill: state ? "#3b82f6" : "#e5e7eb",
                       outline: "none",
-                      cursor: "pointer",
+                      cursor: state ? "pointer" : "not-allowed",
                     },
                     pressed: {
-                      fill: "#dd0000",
+                      fill: "#1d4ed8",
                       outline: "none",
                     },
                   }}
