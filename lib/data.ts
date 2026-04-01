@@ -19,13 +19,13 @@ export const stateOfficials: Record<string, StateOfficials> = {
     },
     facts: {
     capital: "Annapolis",
-    population: "6.1 million",
+    population: "6.2 million ⬆️ (19th)",
     area: "12,407 sq mi",
-    statehood: "April 28, 1788",
+    statehood: "April 28, 1788 (7th)",
     flagUrl: "/flags/Flag_of_Maryland.svg.png",
     sealUrl: "/flags/seals/Seal_of_Maryland_(reverse).svg.png",
     mapUrl: "/flags/maps/md.png",
-    ltgovernor: "Aruna Miller",
+    ltgovernor: "Aruna Miller (D)",
     largestcity: "Baltimore",
     legislature: "General Assembly (House of Delegates and Senate)",
     judiciary: "Supreme Court of Maryland",  
@@ -188,7 +188,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
     },
     facts: {
     capital: "Dover",
-    population: "1.06 million",
+    population: "1.06 million ⬆️",
     area: "2,490 sq mi",
     statehood: "December 7, 1787 (first)",
     flagUrl: "/flags/Flag_of_Delaware.svg.png",
@@ -264,6 +264,25 @@ export const stateOfficials: Record<string, StateOfficials> = {
     website: "https://www.governor.virginia.gov/",
     contactUrl: "https://www.governor.virginia.gov/communicating-with-the-governors-office/",
     photoUrl: "https://www.governor.virginia.gov/media/governorvirginiagov/governor-of-virginia/images/Governor-Spanberger-Official-Portrait.jpg",
+  },
+  facts: {
+    capital: "Richmond",
+    population: "8,880,107 (12th) ⬆️",
+    area: "42,774.59 sq mi",
+    statehood: "June 25, 1788 (10th)",
+    flagUrl: "/flags/Virginia.png",
+    sealUrl: "/flags/seals/Virginia.png",
+    mapUrl: "/flags/maps/Virginia.png",
+    ltgovernor: "Ghazala Hashmi (D)",
+    largestcity: "Virginia Beach",
+    legislature: "General Assembly (House of Delegates and Senate)",
+    judiciary: "Supreme Court of Virginia",  
+    counties: "95",
+    incomerank: "11th",
+    medianincome: "89,900 ⬆️",
+    website: "Virginia.gov",
+    electoral: "13",
+    nickname: "Old Dominion"
   },
 
   senators: [
@@ -455,6 +474,25 @@ pennsylvania: {
     website: "https://www.governor.pa.gov/",
     contactUrl: "https://www.governor.pa.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/26/Josh_Shapiro_December_2025.jpg",
+  },
+  facts: {
+    capital: "Harrisburg",
+    population: "13,059,432 (5th)🔽",
+    area: "46,055 sq mi",
+    statehood: "December 12, 1787 (2nd)",
+    flagUrl: "/flags/penn.png",
+    sealUrl: "/flags/seals/penn.gif",
+    mapUrl: "/flags/maps/penn.png",
+    ltgovernor: "Austin Davis  (D)",
+    largestcity: "Philadelphia",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Supreme Court of Pennsylvania",  
+    counties: "67",
+    incomerank: "28th",
+    medianincome: "73,800 🔽",
+    website: "PA.gov",
+    electoral: "19",
+    nickname: "The Keystone State"
   },
 
   senators: [
@@ -725,6 +763,25 @@ pennsylvania: {
     contactUrl: "https://governor.wv.gov/Pages/contact.aspx",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Governor_Patrick_Morrisey_in_2025.jpg",
   },
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
 
   senators: [
     {
@@ -799,7 +856,25 @@ pennsylvania: {
     contactUrl: "https://www.governor.ny.gov/content/governor-contact-form",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Governor_Kathy_Hochul_Press_Conference_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Albany",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "New York City",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ny-sen-1",
@@ -1185,7 +1260,25 @@ pennsylvania: {
     contactUrl: "https://www.nj.gov/governor/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Gov._Mikie_Sherril.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "nj-sen-1",
@@ -1231,6 +1324,25 @@ pennsylvania: {
     website: "https://portal.ct.gov/office-of-the-governor",
     contactUrl: "https://portal.ct.gov/office-of-the-governor/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Ned_Lamont_2023_Inauguration.png",
+  },
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
   },
 
   senators: [
@@ -1279,7 +1391,25 @@ pennsylvania: {
     contactUrl: "https://governor.ri.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/RI_Governor_Daniel_McKee.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ri-sen-1",
@@ -1327,7 +1457,25 @@ pennsylvania: {
     contactUrl: "https://www.mass.gov/forms/email-the-governors-office",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/39/Maura_Healey%2C_official_portrait%2C_governor.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ma-sen-1",
@@ -1375,7 +1523,25 @@ pennsylvania: {
     contactUrl: "https://www.maine.gov/governor/mills/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Maine_congressional_delegation_meets_with_Gov_Janet_Mills_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "me-sen-1",
@@ -1422,7 +1588,25 @@ pennsylvania: {
     contactUrl: "https://governor.vermont.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Phil_Scott_2019.png",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  }, 
   senators: [
     {
       id: "vt-sen-1",
@@ -1469,7 +1653,25 @@ pennsylvania: {
     contactUrl: "https://www.governor.nh.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/Governor_Kelly_Ayotte_receives_a_briefing_from_National_Guard_cyber_operators_%28cropped%29_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "nh-sen-1",
@@ -1517,7 +1719,25 @@ pennsylvania: {
     contactUrl: "https://governor.nc.gov/contact/contact-governor-stein",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Josh_Stein%2C_Governor_of_North_Carolina_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "nc-sen-1",
@@ -1564,7 +1784,25 @@ pennsylvania: {
     contactUrl: "https://governor.sc.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/McMaster_In_2024.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "sc-sen-1",
@@ -1611,7 +1849,25 @@ pennsylvania: {
     contactUrl: "https://gov.georgia.gov/contact-us",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Brian_Kemp_2023.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ga-sen-1",
@@ -1658,7 +1914,25 @@ pennsylvania: {
     contactUrl: "https://www.flgov.com/email-the-governor/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Ron_DeSantis_official_photo.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "fl-sen-1",
@@ -1705,6 +1979,25 @@ pennsylvania: {
     contactUrl: "https://www.tn.gov/governor/contact-us.html",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/21/Hob_Nob_on_the_State_Line_with_Tennessee_Governor_Bill_Lee%2C_Bristol_%28cropped%29.2.jpg",
   },
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "tn-sen-1",
@@ -1749,6 +2042,25 @@ pennsylvania: {
     website: "https://governor.alabama.gov/",
     contactUrl: "https://governor.alabama.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Governor_Kay_Ivey_2017_%28cropped%29.jpg",
+  },
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
   },
   senators: [
     {
@@ -1795,6 +2107,25 @@ pennsylvania: {
     contactUrl: "https://www.governor.ms.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/48/Gov._Tate_Reeves_Signs_House_Bill_1486_%28cropped%29.jpg",
   },
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ms-sen-1",
@@ -1840,7 +2171,25 @@ pennsylvania: {
     contactUrl: "https://governor.arkansas.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/75/Sarah_Huckabee_Sanders_%28cropped_and_rotated%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ar-sen-1",
@@ -1888,7 +2237,25 @@ pennsylvania: {
     contactUrl: "https://governor.ky.gov/contact/contact-us",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Governor_Andy_Beshear_March_2024.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ky-sen-1",
@@ -1936,7 +2303,25 @@ pennsylvania: {
     contactUrl: "https://gov.louisiana.gov/page/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Jeff_Landry_2025.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "la-sen-1",
@@ -1983,7 +2368,25 @@ pennsylvania: {
     contactUrl: "https://governor.ohio.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Gov-Mike-DeWine.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "oh-sen-1",
@@ -2031,7 +2434,25 @@ pennsylvania: {
     contactUrl: "https://www.in.gov/gov/contact-gov-braun/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/77/Governor_Mike_Braun_DHS.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "in-sen-1",
@@ -2126,7 +2547,25 @@ pennsylvania: {
     contactUrl: "https://www2.illinois.gov/sites/gov/contactus/Pages/default.aspx",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/53/Governor_JB_Pritzker_official_portrait_2019_%28crop%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "il-sen-1",
@@ -2174,7 +2613,25 @@ pennsylvania: {
     contactUrl: "https://evers.wi.gov/Pages/connect/contact.aspx",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/08/Tony_Evers_-_2022_%28a%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "wi-sen-1",
@@ -2222,7 +2679,25 @@ pennsylvania: {
     contactUrl: "https://mn.gov/governor/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/TimWalz2025.jpg",
   },
-
+   facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "mn-sen-1",
@@ -2269,7 +2744,25 @@ pennsylvania: {
     contactUrl: "https://governor.iowa.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kim_Reynolds_2026.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ia-sen-1",
@@ -2317,7 +2810,25 @@ pennsylvania: {
     contactUrl: "https://governor.mo.gov/contact-us",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/48/Mike_Kehoe_2025_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "mo-sen-1",
@@ -2365,7 +2876,25 @@ pennsylvania: {
     contactUrl: "https://governor.kansas.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Laura_Kelly_official_photo.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ks-sen-1",
@@ -2412,7 +2941,25 @@ pennsylvania: {
     contactUrl: "https://governor.nebraska.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/Nebraska_Governor_Jim_Pillen_Visits_Nebraska_National_Guardsmen_Supporting_the_Upcoming_60th_Presidential_Inauguration_%288835248%29_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ne-sen-1",
@@ -2460,7 +3007,25 @@ pennsylvania: {
     contactUrl: "https://www.governor.ok.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/96/Kevin_Stitt_%2855103789989%29_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ok-sen-1",
@@ -2508,7 +3073,25 @@ pennsylvania: {
     contactUrl: "https://gov.texas.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/32/2024-GovernorAbbott-Portrait.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "tx-sen-1",
@@ -2554,7 +3137,25 @@ pennsylvania: {
     contactUrl: "https://www.governor.nd.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Kelly_Armstrong_%283x4_cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "nd-sen-1",
@@ -2602,7 +3203,25 @@ pennsylvania: {
     contactUrl: "https://governor.sd.gov/contact.aspx",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Larry_Rhoden_2025_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "sd-sen-1",
@@ -2650,7 +3269,25 @@ pennsylvania: {
     contactUrl: "https://governor.wyo.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Wyoming_Governor_Mark_Gordon_expands_partnership_with_Tunisia_to_enhance_agriculture_and_civil_protection_%284%29_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "wy-sen-1",
@@ -2697,7 +3334,25 @@ pennsylvania: {
     contactUrl: "https://www.colorado.gov/governor/contact-us",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/46/Jared_Polis_in_2026.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "co-sen-1",
@@ -2745,7 +3400,25 @@ pennsylvania: {
     contactUrl: "https://governor.utah.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/94/Spencer_Cox_-_54856206905_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ut-sen-1",
@@ -2793,7 +3466,25 @@ pennsylvania: {
     contactUrl: "https://www.governor.state.nm.us/contact-the-governor/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Michelle_Lujan_Grisham_2026.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "nm-sen-1",
@@ -2841,7 +3532,25 @@ pennsylvania: {
     contactUrl: "https://azgovernor.gov/contact-governor",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/31/Katie_Hobbs_in_2025.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
         {
       id: "az-sen-1",
@@ -2889,7 +3598,25 @@ pennsylvania: {
     contactUrl: "https://gov.nv.gov/Contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Joe_Lombardo_by_Gage_Skidmore.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "nv-sen-1",
@@ -2936,7 +3663,25 @@ pennsylvania: {
     contactUrl: "https://www.gov.ca.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/90/Governor_of_California_Gavin_Newsom_%28cropped_3x4%29.jpg",
   },
-
+  facts: {
+    capital: "Sacramento",
+    population: "39.35 million 🔽",
+    area: "163,700 sq mi (3rd)",
+    statehood: "September 9, 1850 (31st)",
+    flagUrl: "/flags/California.png",
+    sealUrl: "/flags/seals/California.png",
+    mapUrl: "/flags/maps/California.png",
+    ltgovernor: "Eleni Kounalakis (D)",
+    largestcity: "Los Angeles",
+    legislature: "State Legislature (State Senate and Assembly)",
+    judiciary: "Supreme Court of California",  
+    counties: "58",
+    incomerank: "5th",
+    medianincome: "95,500 ⬆️",
+    website: "CA.gov", 
+    electoral: "54",
+    nickname:  "The Golden State" 
+  },
   senators: [
     {
       id: "ca-sen-1",
@@ -2984,7 +3729,25 @@ pennsylvania: {
     contactUrl: "https://www.oregon.gov/gov/pages/contact-us.aspx",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Tina_Kotek_official_portrait_2021%283x4_cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "or-sen-1",
@@ -3031,8 +3794,26 @@ pennsylvania: {
     website: "https://governor.wa.gov/",
     contactUrl: "https://governor.wa.gov/contacting-governor",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bob_Ferguson_at_his_2023_Shrimp_Feed_02_%28cropped%29.jpg",
+  },  
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
   },
-
   senators: [
     {
       id: "wa-sen-1",
@@ -3080,7 +3861,25 @@ pennsylvania: {
     contactUrl: "https://gov.idaho.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Brad_Little_official_photo.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "id-sen-1",
@@ -3128,7 +3927,25 @@ pennsylvania: {
     contactUrl: "https://governor.mt.gov/contact",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Greg_Gianforte_in_2025_%28cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
         {
       id: "mt-sen-1",
@@ -3175,7 +3992,25 @@ pennsylvania: {
     contactUrl: "https://gov.alaska.gov/contact/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Governor_Mike_J._Dunleavy_-_Official_Portrait.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "ak-sen-1",
@@ -3223,7 +4058,25 @@ pennsylvania: {
     contactUrl: "https://governor.hawaii.gov/contact-us/",
     photoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Josh_Green_Official_Photo_2022_%28cropped%29_1cropped%29.jpg",
   },
-
+  facts: {
+    capital: "Dover",
+    population: "1.06 million ⬆️",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
+  },
   senators: [
     {
       id: "hi-sen-1",

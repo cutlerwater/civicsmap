@@ -45,7 +45,7 @@ export default async function StatePage({ params }: Props) {
       </div>
 
       {/* HERO */}
-      <section className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <section className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:shadow-md">
         {/* BACKGROUND */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-100" />
@@ -55,7 +55,7 @@ export default async function StatePage({ params }: Props) {
 
         <div className="relative grid gap-10 p-8 md:grid-cols-[1.4fr_1fr] md:p-12">
           {/* LEFT SIDE */}
-          <div>
+          <div className="transition duration-500">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-700">
               State Profile
             </p>
@@ -108,15 +108,15 @@ export default async function StatePage({ params }: Props) {
                   href={data.facts.website}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700"
-                >
+                  className="inline-flex items-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md"
+              >
                   Official Website
                 </a>
               )}
 
               <Link
                 href="/"
-                className="inline-flex items-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="inline-flex items-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md"
               >
                 Back to Map
               </Link>
@@ -126,48 +126,49 @@ export default async function StatePage({ params }: Props) {
           {/* RIGHT SIDE VISUALS */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {data.facts?.flagUrl && (
-              <div className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow backdrop-blur">
-                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <div className="group rounded-2xl border border-white/60 bg-white/70 p-5 shadow backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-xl">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Flag
                 </p>
-                <div className="relative h-28">
+                <div className="relative h-36 md:h-40 overflow-hidden rounded-lg">
                   <Image
                     src={data.facts.flagUrl}
                     alt={`${data.name} flag`}
                     fill
-                    className="object-contain"
+                    className="object-contain transition duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
             )}
 
             {data.facts?.sealUrl && (
-              <div className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow backdrop-blur">
+              <div className="group rounded-2xl border border-white/60 bg-white/70 p-5 shadow backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-xl">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Seal
                 </p>
-                <div className="relative h-28">
+                <div className="relative h-36 md:h-40 overflow-hidden rounded-lg">
                   <Image
                     src={data.facts.sealUrl}
                     alt={`${data.name} seal`}
                     fill
-                    className="object-contain"
+                    className="object-contain transition duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
             )}
 
+            {/* MAP */}
             {data.facts?.mapUrl && (
-              <div className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow backdrop-blur">
-                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <div className="group rounded-2xl border border-white/60 bg-white/70 p-5 shadow backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-xl">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Map
                 </p>
-                <div className="relative h-28">
+                <div className="relative h-36 md:h-40 overflow-hidden rounded-lg">
                   <Image
                     src={data.facts.mapUrl}
                     alt={`${data.name} map`}
                     fill
-                    className="object-contain"
+                    className="object-contain transition duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
