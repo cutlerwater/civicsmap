@@ -1,6 +1,6 @@
 import OfficialCard from "@/components/OfficialCard";
+import StateFacts from "@/components/StateFacts";
 import { getState } from "@/lib/data";
-
 
 type Props = {
   params: Promise<{
@@ -8,25 +8,18 @@ type Props = {
   }>;
 };
 
-export default async function StatePage({ params }: Props) {
-  const { slug } = await params;
+export default async function StatePage(props: Props) {
+  const { slug } = await props.params;
   const data = getState(slug);
 
   if (!data) {
-  return (
-    <main className="min-h-screen mx-auto max-w-7xl px-6 py-12">
-      <h1 className="text-3xl font-bold text-slate-900">
-        State not available yet
-      </h1>
-      <p className="mt-4 text-slate-600">
-        We're still adding data for this state.
-      </p>
-    </main>
-  );
-}
+    return <div>State not found</div>;
+  }
 
   return (
     <main className="mx-auto max-w-7xl px-6 py-12">
+      <StateFacts facts={data.facts} name={data.name} />
+
       <div className="mb-10">
         <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
           State Overview
@@ -35,7 +28,7 @@ export default async function StatePage({ params }: Props) {
           {data.name}
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-slate-600">
-          View the Governor, U.S. senators, and U.S. representatives for{" "}
+          View the governor, U.S. senators, and U.S. representatives for{" "}
           {data.name}.
         </p>
       </div>

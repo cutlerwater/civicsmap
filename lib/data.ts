@@ -17,6 +17,13 @@ export const stateOfficials: Record<string, StateOfficials> = {
       contactUrl: "https://governor.maryland.gov/contact-us/",
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Wes_Moore_Official_Governor_Portrait.jpg",
     },
+    facts: {
+    capital: "Annapolis",
+    population: "6.1 million",
+    area: "12,407 sq mi",
+    statehood: "April 28, 1788",
+    flagUrl: "/flags/Flag_of_Maryland.svg.png",
+  },
     senators: [
       {
         id: "md-sen-1",
@@ -149,6 +156,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
         photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Jamie_Raskin_Official_Portrait_2019.jpg",
       }
     ],
+    
   },
    delaware: {
     name: "Delaware",

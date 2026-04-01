@@ -12,6 +12,14 @@ export type Official = {
   contactUrl?: string;
 };
 
+export type StateFacts = {
+  capital?: string;
+  population?: string;
+  area?: string;
+  statehood?: string;
+  flagUrl?: string;
+};
+
 export type StateOfficials = {
   name: string;
   slug: string;
@@ -19,4 +27,5 @@ export type StateOfficials = {
   governor: Official | null;
   senators: Official[];
   representatives: Official[];
+  facts?: StateFacts;
 };
