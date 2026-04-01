@@ -23,6 +23,15 @@ export const stateOfficials: Record<string, StateOfficials> = {
     area: "12,407 sq mi",
     statehood: "April 28, 1788",
     flagUrl: "/flags/Flag_of_Maryland.svg.png",
+    sealUrl: "/flags/Seal_of_Maryland_(reverse).svg.png",
+    ltgovernor: "Aruna Miller",
+    largestcity: "Baltimore",
+    legislature: "General Assembly (House of Delegates and Senate)",
+    judiciary: "Supreme Court of Maryland",  
+    counties: "23",
+    incomerank: "3rd",
+    medianincome: "98,700",
+    website: "Maryland.gov"   
   },
     senators: [
       {
@@ -174,6 +183,22 @@ export const stateOfficials: Record<string, StateOfficials> = {
       contactUrl: "https://governor.delaware.gov/contact/",
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a6/%2802-19-2025%29_Matt_Meyer.jpg",
     },
+    facts: {
+    capital: "Dover",
+    population: "1.06 million",
+    area: "2,490 sq mi",
+    statehood: "December 7, 1787 (first)",
+    flagUrl: "/flags/Flag_of_Delaware.svg.png",
+    sealUrl: "/flags/Seal_of_Delaware_(reverse).svg.png",
+    ltgovernor: "Kyle Evans Gay (D)",
+    largestcity: "Wilmington",
+    legislature: "General Assembly (House of Representatives and Senate)",
+    judiciary: "Delaware Supreme Court",  
+    counties: "3",
+    incomerank: "15th",
+    medianincome: "81,400",
+    website: "Delaware.gov"   
+  },
     senators: [
       {
         id: "de-sen-1",
