@@ -8,6 +8,7 @@ type StateFactsProps = {
     statehood?: string;
     flagUrl?: string;
     sealUrl?:string;
+    mapUrl?:string;
     ltgovernor?: string;
     largestcity?: string;
     legislature?: string,
@@ -16,6 +17,8 @@ type StateFactsProps = {
     incomerank?: string;
     medianincome?: string;
     website?: string;
+    electoral?: string;
+    nickname?: string;
     };
   name: string;
 };
@@ -39,7 +42,14 @@ export default function StateFacts({ facts, name }: StateFactsProps) {
         {facts.sealUrl && (
           <img
             src={facts.sealUrl}
-            alt={`${name} flag`}
+            alt={`${name} seal`}
+            className="h-16 w-auto rounded shadow"
+          />
+        )}
+        {facts.mapUrl && (
+          <img
+            src={facts.mapUrl}
+            alt={`${name} map`}
             className="h-16 w-auto rounded shadow"
           />
         )}
@@ -123,10 +133,25 @@ export default function StateFacts({ facts, name }: StateFactsProps) {
             <p className="font-semibold">{facts.medianincome}</p>
           </div>
           
-        )}{facts.website && (
+        )}
+        {facts.website && (
           <div className="rounded-xl bg-slate-100 p-4">
             <p className="text-xs text-slate-500">Website</p>
             <p className="font-semibold">{facts.website}</p>
+          </div>
+          
+        )}
+        {facts.electoral && (
+          <div className="rounded-xl bg-slate-100 p-4">
+            <p className="text-xs text-slate-500">Electoral Votes</p>
+            <p className="font-semibold">{facts.electoral}</p>
+          </div>
+          
+        )}
+        {facts.nickname && (
+          <div className="rounded-xl bg-slate-100 p-4">
+            <p className="text-xs text-slate-500">Nickname</p>
+            <p className="font-semibold">{facts.nickname}</p>
           </div>
           
         )}

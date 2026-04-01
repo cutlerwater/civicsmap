@@ -23,7 +23,8 @@ export const stateOfficials: Record<string, StateOfficials> = {
     area: "12,407 sq mi",
     statehood: "April 28, 1788",
     flagUrl: "/flags/Flag_of_Maryland.svg.png",
-    sealUrl: "/flags/Seal_of_Maryland_(reverse).svg.png",
+    sealUrl: "/flags/seals/Seal_of_Maryland_(reverse).svg.png",
+    mapUrl: "/flags/maps/md.png",
     ltgovernor: "Aruna Miller",
     largestcity: "Baltimore",
     legislature: "General Assembly (House of Delegates and Senate)",
@@ -31,7 +32,9 @@ export const stateOfficials: Record<string, StateOfficials> = {
     counties: "23",
     incomerank: "3rd",
     medianincome: "98,700",
-    website: "Maryland.gov"   
+    website: "Maryland.gov", 
+    electoral: "10",
+    nickname:  "Old Line State" 
   },
     senators: [
       {
@@ -189,7 +192,8 @@ export const stateOfficials: Record<string, StateOfficials> = {
     area: "2,490 sq mi",
     statehood: "December 7, 1787 (first)",
     flagUrl: "/flags/Flag_of_Delaware.svg.png",
-    sealUrl: "/flags/Seal_of_Delaware_(reverse).svg.png",
+    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
+    mapUrl: "/flags/maps/delawaremap.png",
     ltgovernor: "Kyle Evans Gay (D)",
     largestcity: "Wilmington",
     legislature: "General Assembly (House of Representatives and Senate)",
@@ -197,7 +201,9 @@ export const stateOfficials: Record<string, StateOfficials> = {
     counties: "3",
     incomerank: "15th",
     medianincome: "81,400",
-    website: "Delaware.gov"   
+    website: "Delaware.gov",
+    electoral: "3",
+    nickname: "The First State"
   },
     senators: [
       {

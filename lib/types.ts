@@ -12,6 +12,7 @@ export type Official = {
   photoUrl?: string;
   website?: string;
   contactUrl?: string;
+
 };
 
 export type StateFacts = {
@@ -21,6 +22,7 @@ export type StateFacts = {
   statehood?: string;
   flagUrl?: string;
   sealUrl?: string;
+  mapUrl?: string;
   ltgovernor?: string;
   largestcity?: string;
   legislature?: string;
@@ -29,6 +31,8 @@ export type StateFacts = {
   incomerank?: string;
   medianincome?: string;
   website?: string;
+  electoral?: string;
+  nickname?: string;
   
 };
 
