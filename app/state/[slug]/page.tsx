@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import StateFacts from "@/components/StateFacts";
-import OfficialCard from "@/components/OfficialCard";
 import { getState } from "@/lib/data";
+import OfficialCard from "@/components/OfficialCard";
 
 type Props = {
   params: Promise<{
@@ -45,73 +44,153 @@ export default async function StatePage({ params }: Props) {
         </Link>
       </div>
 
-      {/* HERO VISUALS */}
-<div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-  {data.facts?.flagUrl && (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-        Flag
-      </p>
-      <div className="relative h-24 sm:h-28 md:h-32">
-        <Image
-          src={data.facts.flagUrl}
-          alt={`${data.name} flag`}
-          fill
-          className="object-contain"
-        />
-      </div>
-    </div>
-  )}
+      {/* HERO */}
+      <section className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        {/* BACKGROUND */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-100" />
+          <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-indigo-200/20 blur-3xl" />
+        </div>
 
-  {data.facts?.sealUrl && (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-        Seal
-      </p>
-      <div className="relative h-24 sm:h-28 md:h-32">
-        <Image
-          src={data.facts.sealUrl}
-          alt={`${data.name} seal`}
-          fill
-          className="object-contain"
-        />
-      </div>
-    </div>
-  )}
+        <div className="relative grid gap-10 p-8 md:grid-cols-[1.4fr_1fr] md:p-12">
+          {/* LEFT SIDE */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-700">
+              State Profile
+            </p>
 
-  {data.facts?.mapUrl && (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-        Map
-      </p>
-      <div className="relative h-24 sm:h-28 md:h-32">
-        <Image
-          src={data.facts.mapUrl}
-          alt={`${data.name} map`}
-          fill
-          className="object-contain"
-        />
-      </div>
-    </div>
-  )}
-</div>
-      
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+              {data.name}
+            </h1>
+
+            {data.facts?.nickname && (
+              <p className="mt-2 text-lg italic text-slate-600">
+                “{data.facts.nickname}”
+              </p>
+            )}
+
+            <div className="mt-6 flex flex-wrap gap-4 text-sm text-slate-600">
+              {data.facts?.capital && (
+                <span className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
+                  Capital: {data.facts.capital}
+                </span>
+              )}
+
+              {data.facts?.population && (
+                <span className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
+                  Population: {data.facts.population}
+                </span>
+              )}
+
+              {data.facts?.electoral && (
+                <span className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
+                  Electoral Votes: {data.facts.electoral}
+                </span>
+              )}
+
+              {data.facts?.area && (
+                <span className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
+                  Area: {data.facts.area}
+                </span>
+              )}
+
+              {data.facts?.counties && (
+                <span className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
+                  Number of Counties: {data.facts.counties}
+                </span>
+              )}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {data.facts?.website && (
+                <a
+                  href={data.facts.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700"
+                >
+                  Official Website
+                </a>
+              )}
+
+              <Link
+                href="/"
+                className="inline-flex items-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                Back to Map
+              </Link>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE VISUALS */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {data.facts?.flagUrl && (
+              <div className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow backdrop-blur">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Flag
+                </p>
+                <div className="relative h-28">
+                  <Image
+                    src={data.facts.flagUrl}
+                    alt={`${data.name} flag`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            )}
+
+            {data.facts?.sealUrl && (
+              <div className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow backdrop-blur">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Seal
+                </p>
+                <div className="relative h-28">
+                  <Image
+                    src={data.facts.sealUrl}
+                    alt={`${data.name} seal`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            )}
+
+            {data.facts?.mapUrl && (
+              <div className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow backdrop-blur">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Map
+                </p>
+                <div className="relative h-28">
+                  <Image
+                    src={data.facts.mapUrl}
+                    alt={`${data.name} map`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* QUICK FACTS */}
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         <QuickFact label="Capital" value={data.facts?.capital} />
-        <QuickFact label="Largest City" value={data.facts?.largestCity} />
+        <QuickFact label="Largest City" value={data.facts?.largestcity} />
         <QuickFact label="Population" value={data.facts?.population} />
         <QuickFact label="Area" value={data.facts?.area} />
         <QuickFact label="Statehood" value={data.facts?.statehood} />
-        <QuickFact label="Number of Counties" value={data.facts?.counties} />
+        <QuickFact label="Counties" value={data.facts?.counties} />
       </section>
 
       {/* DETAIL CARDS */}
       <section className="mt-10 grid gap-6 lg:grid-cols-2">
         <InfoCard title="Government">
           <FactRow label="Governor" value={data.governor?.name} />
-          <FactRow label="Lt. Governor" value={data.facts?.ltGovernor} />
+          <FactRow label="Lt. Governor" value={data.facts?.ltgovernor} />
           <FactRow label="Legislature" value={data.facts?.legislature} />
           <FactRow label="Judiciary" value={data.facts?.judiciary} />
           <FactRow label="Website" value={data.facts?.website} isLink />
@@ -119,14 +198,14 @@ export default async function StatePage({ params }: Props) {
 
         <InfoCard title="Geography">
           <FactRow label="Capital" value={data.facts?.capital} />
-          <FactRow label="Largest City" value={data.facts?.largestCity} />
+          <FactRow label="Largest City" value={data.facts?.largestcity} />
           <FactRow label="Area" value={data.facts?.area} />
-          <FactRow label="Number of Counties" value={data.facts?.counties} />
+          <FactRow label="Counties" value={data.facts?.counties} />
         </InfoCard>
 
         <InfoCard title="Demographics & Economy">
           <FactRow label="Population" value={data.facts?.population} />
-          <FactRow label="Median Income" value={data.facts?.medianIncome} />
+          <FactRow label="Median Income" value={data.facts?.medianincome} />
           <FactRow label="Income Rank" value={data.facts?.incomerank} />
         </InfoCard>
 
@@ -134,6 +213,7 @@ export default async function StatePage({ params }: Props) {
           <FactRow label="Nickname" value={data.facts?.nickname} />
           <FactRow label="Electoral Votes" value={data.facts?.electoral} />
           <FactRow label="Statehood" value={data.facts?.statehood} />
+          <FactRow label="Legislature" value={data.facts?.legislature} />
         </InfoCard>
       </section>
 
