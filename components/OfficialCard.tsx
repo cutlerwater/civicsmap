@@ -14,11 +14,13 @@ type Official = {
 type OfficialCardProps = {
   official: Official;
   featured?: boolean;
+  large?: boolean;
 };
 
 export default function OfficialCard({
   official,
   featured = false,
+  large = false,
 }: OfficialCardProps) {
   const partyStyles =
     official.party === "Democratic" || official.party === "D"
@@ -54,7 +56,7 @@ export default function OfficialCard({
                 alt={official.name}
                 fill
                 unoptimized
-                sizes="(max-width: 768px) 128px, 160px"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition duration-300 group-hover:scale-105"
               />
             ) : (
@@ -116,14 +118,20 @@ export default function OfficialCard({
 
   return (
     <article className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="flex items-start gap-4">
-        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200">
+     <div className={`flex items-start ${large ? "gap-5" : "gap-4"}`}>
+        <div
+          className={`relative shrink-0 overflow-hidden bg-slate-100 ring-1 ring-slate-200 ${
+            large
+              ? "h-28 w-28 rounded-2xl"
+              : "h-24 w-24 rounded-2xl"
+          }`}
+        >
           {official.photoUrl ? (
             <Image
               src={official.photoUrl}
               alt={official.name}
               fill
-              sizes="64px"
+              sizes={large ? "112px" : "96px"}
               unoptimized
               className="object-cover"
             />
@@ -139,7 +147,11 @@ export default function OfficialCard({
             {official.role || "Official"}
           </p>
 
-          <h3 className="mt-1 text-xl font-bold tracking-tight text-slate-900">
+          <h3
+            className={`mt-1 font-bold tracking-tight text-slate-900 ${
+              large ? "text-2xl" : "text-xl"
+            }`}
+          >
             {official.name}
           </h3>
 

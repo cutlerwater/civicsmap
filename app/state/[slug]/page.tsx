@@ -1,17 +1,47 @@
+"use client";
+
+import { useLayoutEffect, useRef, useState } from "react";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getState } from "@/lib/data";
 import OfficialCard from "@/components/OfficialCard";
+import DistrictMap from "@/components/DistrictMap";
 
-type Props = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+function normalizeDistrict(value?: string) {
+  if (!value) return "";
 
-export default async function StatePage({ params }: Props) {
-  const { slug } = await params;
+  const match = String(value).match(/\d+/);
+  return match ? String(Number(match[0])) : "";
+}
+
+export default function StatePage() {
+  const params = useParams();
+  const slug = params.slug as string;
+
   const data = getState(slug);
+
+  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
+  const repRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  useLayoutEffect(() => {
+  if (!selectedDistrict) return;
+
+  const el = repRefs.current[selectedDistrict];
+
+  console.log("selectedDistrict:", selectedDistrict);
+  console.log("repRefs keys:", Object.keys(repRefs.current));
+  console.log("rep ref element:", el);
+
+  if (el) {
+    console.log("element top:", el.getBoundingClientRect().top);
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
+  }
+}, [selectedDistrict]);
 
   if (!data) {
     return (
@@ -43,7 +73,9 @@ export default async function StatePage({ params }: Props) {
           ← Back to map
         </Link>
       </div>
-
+<div className="mb-6 flex gap-3">
+  
+</div>
       {/* HERO */}
       <section className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:shadow-md">
         {/* BACKGROUND */}
@@ -248,25 +280,61 @@ export default async function StatePage({ params }: Props) {
             </h3>
             <div className="grid gap-6 md:grid-cols-2">
               {data.senators.map((senator) => (
-                <OfficialCard key={senator.name} official={senator} />
+                <OfficialCard key={senator.name} official={senator} large />
               ))}
             </div>
           </div>
         )}
-
-        {data.representatives?.length > 0 && (
+        
+       {data.representatives?.length > 0 && (
           <div>
             <h3 className="mb-4 text-xl font-semibold text-slate-900">
               U.S. Representatives
             </h3>
+            <p className="mb-4 text-sm text-slate-600">
+      Selected district: {selectedDistrict ?? "none"}
+    </p>
+            
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {data.representatives.map((rep) => (
-                <OfficialCard key={rep.name} official={rep} />
-              ))}
+              {data.representatives.map((rep) => {
+                const normalizedRepDistrict = normalizeDistrict(rep.district);
+
+                const isSelected =
+                  selectedDistrict &&
+                  normalizedRepDistrict === String(selectedDistrict);
+
+                return (
+                  <div
+                    key={rep.name}
+                    ref={(el) => {
+                      if (normalizedRepDistrict) {
+                        repRefs.current[normalizedRepDistrict] = el;
+                      }
+                    }}
+                    className={`rounded-2xl transition duration-300 ${
+                      isSelected
+                        ? "ring-2 ring-blue-500 ring-offset-2 shadow-lg bg-blue-50/40"
+                        : ""
+                    }`}
+                  >
+                    <OfficialCard official={rep} />
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
       </section>
+
+      {slug === "maryland" && (
+        <section className="mt-12">
+          <DistrictMap
+            geoUrl="/geo/maryland-congressional-districts.geojson"
+            title="Maryland Congressional Districts"
+            onDistrictSelect={(district) => setSelectedDistrict(district)}
+          />
+                  </section>
+      )}
 
       {/* BOTTOM NAV */}
       <section className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
