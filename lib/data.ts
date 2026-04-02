@@ -2734,11 +2734,11 @@ pennsylvania: {
 
   representatives: [
     {
-      id: "mi-rep-1",
+      id: "in-rep-1",
       name: "",
       title: "U.S. Representative",
-      state: "Michigan",
-      stateSlug: "michigan",
+      state: "Indiana",
+      stateSlug: "indiana",
       chamber: "house",
       district: "1st District",
       party: "",
@@ -2773,7 +2773,7 @@ pennsylvania: {
     statehood: "January 26, 1837 (26th)",
     flagUrl: "/flags/Michigan.png",
     sealUrl: "/flags/seals/Michigan.png",
-    mapUrl: "/flags/maps/Michigan.png",
+    mapUrl: "/flags/maps/michigan.png",
     ltgovernor: "Garlin Gilchrist (D)",
     largestcity: "Detroit",
     legislature: "Michigan Legislature (House of Representatives and Senate)",
