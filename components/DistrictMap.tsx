@@ -57,8 +57,8 @@ export default function DistrictMap({
           className="h-auto w-full"
         >
           <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
+            {({ geographies }: { geographies: any[] }) =>
+                geographies.map((geo: any) => {
                 const props = geo.properties as DistrictProperties;
 
                 const rawDistrict =
