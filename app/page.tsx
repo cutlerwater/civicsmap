@@ -1,10 +1,13 @@
 import StateSelector from "@/components/StateSelector";
 import USMap from "@/components/USMap";
+import ZipLookup from "@/components/ZipLookup";
 
 export default function Home() {
   return (
     <main className="min-h-screen mx-auto max-w-7xl px-6 py-12">
       <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
+        
+        {/* LEFT SIDE */}
         <div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-700">
             State Lookup
@@ -24,9 +27,17 @@ export default function Home() {
           </div>
         </div>
 
+        {/* RIGHT SIDE (MAP + ZIP) */}
         <div>
-          <USMap />
+          <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+            <USMap />
+
+            <div className="mt-8 border-t border-slate-200 pt-6">
+              <ZipLookup />
+            </div>
+          </section>
         </div>
+
       </section>
     </main>
   );

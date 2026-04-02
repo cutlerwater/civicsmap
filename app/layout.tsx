@@ -1,9 +1,11 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import type { ReactNode } from "react";
+// app/layout.tsx
+import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "CivicMap | Cutlerwater Apps",
+  title: "Civics Map | Cutlerwater Apps",
   description: "Find your governor, senators, and representatives by state.",
 };
 
@@ -17,6 +19,7 @@ export default function RootLayout({
       <body className="bg-green-800 text-red-900">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -135,6 +135,7 @@ export default async function StatePage({ params }: Props) {
                     src={data.facts.flagUrl}
                     alt={`${data.name} flag`}
                     fill
+                    sizes="(max-width: 640px) 100vw, 120px"
                     className="object-contain transition duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -151,6 +152,7 @@ export default async function StatePage({ params }: Props) {
                     src={data.facts.sealUrl}
                     alt={`${data.name} seal`}
                     fill
+                    sizes="(max-width: 640px) 100vw, 120px"
                     className="object-contain transition duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -168,6 +170,7 @@ export default async function StatePage({ params }: Props) {
                     src={data.facts.mapUrl}
                     alt={`${data.name} map`}
                     fill
+                    sizes="(max-width: 640px) 100vw, 120px"
                     className="object-contain transition duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -230,11 +233,11 @@ export default async function StatePage({ params }: Props) {
         </div>
 
         {data.governor && (
-          <div className="mb-8">
+          <div className="mb-10">
             <h3 className="mb-4 text-xl font-semibold text-slate-900">
               Governor
             </h3>
-            <OfficialCard official={data.governor} />
+            <OfficialCard official={data.governor} featured />
           </div>
         )}
 
