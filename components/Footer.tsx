@@ -1,7 +1,7 @@
 // components/Footer.tsx
 import Link from "next/link";
 import {
-  Github,
+  
   Globe,
   Mail,
   ExternalLink,
