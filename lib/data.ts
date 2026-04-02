@@ -33,7 +33,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
     incomerank: "3rd",
     medianincome: "98,700",
     website: "Maryland.gov", 
-    electoral: "10",
+    electoral: "10 (9 Democrats, 1 Republican)",
     nickname:  "Old Line State" 
   },
     senators: [
@@ -188,8 +188,8 @@ export const stateOfficials: Record<string, StateOfficials> = {
     },
     facts: {
     capital: "Dover",
-    population: "1.06 million ⬆️",
-    area: "2,490 sq mi",
+    population: "1.06 million (45th) ⬆️",
+    area: "2,490 sq mi (49th)",
     statehood: "December 7, 1787 (first)",
     flagUrl: "/flags/Flag_of_Delaware.svg.png",
     sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
@@ -202,7 +202,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
     incomerank: "15th",
     medianincome: "81,400",
     website: "Delaware.gov",
-    electoral: "3",
+    electoral: "3 (3 Democrats)",
     nickname: "The First State"
   },
     senators: [
@@ -271,7 +271,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
     area: "42,774.59 sq mi",
     statehood: "June 25, 1788 (10th)",
     flagUrl: "/flags/Virginia.png",
-    sealUrl: "/flags/seals/Virginia.png",
+    sealUrl: "/flags/seals/va.png",
     mapUrl: "/flags/maps/Virginia.png",
     ltgovernor: "Ghazala Hashmi (D)",
     largestcity: "Virginia Beach",
@@ -281,7 +281,7 @@ export const stateOfficials: Record<string, StateOfficials> = {
     incomerank: "11th",
     medianincome: "89,900 ⬆️",
     website: "Virginia.gov",
-    electoral: "13",
+    electoral: "13 (8 Democrats, 5 Republicans)",
     nickname: "Old Dominion"
   },
 
@@ -478,7 +478,7 @@ pennsylvania: {
   facts: {
     capital: "Harrisburg",
     population: "13,059,432 (5th)🔽",
-    area: "46,055 sq mi",
+    area: "46,055 sq mi (33rd)",
     statehood: "December 12, 1787 (2nd)",
     flagUrl: "/flags/penn.png",
     sealUrl: "/flags/seals/penn.gif",
@@ -491,7 +491,7 @@ pennsylvania: {
     incomerank: "28th",
     medianincome: "73,800 🔽",
     website: "PA.gov",
-    electoral: "19",
+    electoral: "19 (11 Republicans, 8 Democrats)",
     nickname: "The Keystone State"
   },
 
@@ -765,8 +765,8 @@ pennsylvania: {
   },
   facts: {
     capital: "Charleston",
-    population: "1,766,147 million (39th) 🔽",
-    area: "24,230 sq mi",
+    population: "1,766,147 (39th) 🔽",
+    area: "24,230 sq mi (41st)",
     statehood: "June 20, 1863 (35th)",
     flagUrl: "/flags/wv.png",
     sealUrl: "/flags/seals/wv.png",
@@ -858,22 +858,22 @@ pennsylvania: {
   },
   facts: {
     capital: "Albany",
-    population: "1.06 million ⬆️",
-    area: "2,490 sq mi",
-    statehood: "December 7, 1787 (first)",
-    flagUrl: "/flags/Flag_of_Delaware.svg.png",
-    sealUrl: "/flags/seals/Seal_of_Delaware.svg.png",
-    mapUrl: "/flags/maps/delawaremap.png",
-    ltgovernor: "Kyle Evans Gay (D)",
+    population: "20,002,427 (4th) ⬆️",
+    area: "54,555 sq mi (27th)",
+    statehood: "July 26, 1788 (11th)",
+    flagUrl: "/flags/ny.png",
+    sealUrl: "/flags/seals/ny.png",
+    mapUrl: "/flags/maps/ny.png",
+    ltgovernor: "Antonio Delgado (D)",
     largestcity: "New York City",
-    legislature: "General Assembly (House of Representatives and Senate)",
-    judiciary: "Delaware Supreme Court",  
-    counties: "3",
-    incomerank: "15th",
-    medianincome: "81,400",
-    website: "Delaware.gov",
-    electoral: "3",
-    nickname: "The First State"
+    legislature: "New York State Legislature (State Assembly and Senate)",
+    judiciary: "New York Court of Appeals",  
+    counties: "62",
+    incomerank: "14th",
+    medianincome: "82,100 🔽",
+    website: "NY.gov",
+    electoral: "29 (21 Democrats, 7 Republicans)",
+    nickname: "The Empire State"
   },
   senators: [
     {
@@ -1262,8 +1262,8 @@ pennsylvania: {
   },
   facts: {
     capital: "Trenton",
-    population: "9,548,215 ⬆️",
-    area: "8,722 sq mi",
+    population: "9,548,215 (11th) ⬆️",
+    area: "8,722 sq mi (47th)",
     statehood: "December 18, 1787 (3rd)",
     flagUrl: "/flags/nj.png",
     sealUrl: "/flags/seals/nj.png",
@@ -1306,7 +1306,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "nj-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "New Jersey",
+      stateSlug: "new-jersey",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "connecticut": {
   name: "Connecticut",
@@ -1328,7 +1342,7 @@ pennsylvania: {
   facts: {
     capital: "Hartford",
     population: "3,688,496 (29th) ⬆️",
-    area: "5,543 (48th) sq mi",
+    area: "5,543 sq mi (48th)",
     statehood: "January 9, 1788 (5th)",
     flagUrl: "/flags/ct.png",
     sealUrl: "/flags/seals/ct.png",
@@ -1340,7 +1354,7 @@ pennsylvania: {
     counties: "8",
     incomerank: "10th",
     medianincome: "91,700",
-    website: "Delaware.gov",
+    website: "ct.gov",
     electoral: "7 (7 Democrats)",
     nickname: "The Constitution State"
   },
@@ -1372,7 +1386,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ct-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Connecticut",
+      stateSlug: "connecticut",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "rhode-island": {
   name: "Rhode Island",
@@ -1438,7 +1466,21 @@ pennsylvania: {
 
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ri-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Rhode Island",
+      stateSlug: "rhode-island",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "massachusetts": {
   name: "Massachusetts",
@@ -1472,7 +1514,7 @@ pennsylvania: {
     counties: "14",
     incomerank: "1st",
     medianincome: "99,900",
-    website: "Delaware.gov",
+    website: "ma.gov",
     electoral: "11 (11 Democrats)",
     nickname: "The Bay State"
   },
@@ -1504,7 +1546,21 @@ pennsylvania: {
 
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ma-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Massachusetts",
+      stateSlug: "massachusetts",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "maine": {
   name: "Maine",
@@ -1569,7 +1625,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "me-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Maine",
+      stateSlug: "maine",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "vermont": {
   name: "Vermont",
@@ -1634,7 +1704,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [ 
+    {
+      id: "vt-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Vermont",
+      stateSlug: "vermont",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "new-hampshire": {
   name: "New Hampshire",
@@ -1661,14 +1745,14 @@ pennsylvania: {
     flagUrl: "/flags/nh.png",
     sealUrl: "/flags/seals/nh.png",
     mapUrl: "/flags/maps/nh.png",
-    ltgovernor: "	Sharon Carson (R)",
+    ltgovernor: "Sharon Carson (R)",
     largestcity: "Manchester",
     legislature: "General Court (House of Representatives and Senate)",
     judiciary: "New Hampshire Supreme Court",  
     counties: "10",
     incomerank: "4th",
     medianincome: "96,800",
-    website: "Delaware.gov",
+    website: "NH.gov",
     electoral: "4 (4 Democrats)",
     nickname: "Granite State"
   },
@@ -1700,7 +1784,21 @@ pennsylvania: {
     
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "nh-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "New Hampshire",
+      stateSlug: "new-hampshire",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "north-carolina": {
   name: "North Carolina",
@@ -1765,7 +1863,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "nc-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "North Carolina",
+      stateSlug: "north-carolina",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "south-carolina": {
   name: "South Carolina",
@@ -1830,7 +1942,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "sc-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "South Carolina",
+      stateSlug: "south-carolina",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "georgia": {
   name: "Georgia",
@@ -1895,7 +2021,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ga-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Georgia",
+      stateSlug: "georgia",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "florida": {
   name: "Florida",
@@ -1960,7 +2100,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "fl-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Florida",
+      stateSlug: "florida",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "tennessee": {
@@ -2024,7 +2178,21 @@ pennsylvania: {
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/Bill_Hagerty_senatorial_portrait.jpg",
     },
   ],
-  representatives: [],
+  representatives: [
+    {
+      id: "tn-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Tennessee",
+      stateSlug: "tennessee",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "alabama": {
@@ -2088,7 +2256,21 @@ pennsylvania: {
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/23/Katie_Britt.jpg",
     },
   ],
-  representatives: [],
+  representatives: [
+    {
+      id: "al-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Alabma",
+      stateSlug: "alabama",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "mississippi": {
@@ -2152,7 +2334,21 @@ pennsylvania: {
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/52/Official_headshot_of_US_Senator_Cindy_Hyde-Smith.jpg",
     },
   ],
-  representatives: [],
+  representatives: [
+    {
+      id: "ms-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Mississippi",
+      stateSlug: "mississippi",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "arkansas": {
   name: "Arkansas",
@@ -2217,7 +2413,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ar-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Arkansas",
+      stateSlug: "arkansas",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "kentucky": {
@@ -2283,7 +2493,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ky-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Kentucky",
+      stateSlug: "kentucky",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "louisiana": {
@@ -2349,7 +2573,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "la-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Louisiana",
+      stateSlug: "louisiana",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "ohio": {
   name: "Ohio",
@@ -2414,7 +2652,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "oh-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Ohio",
+      stateSlug: "ohio",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "indiana": {
@@ -2449,7 +2701,7 @@ pennsylvania: {
     counties: "3",
     incomerank: "15th",
     medianincome: "81,400",
-    website: "Delaware.gov",
+    website: "Indiana.gov",
     electoral: "11 (9 Republicans, 2 Democrats)",
     nickname: "The Hoosier State"
   },
@@ -2480,7 +2732,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "mi-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Michigan",
+      stateSlug: "michigan",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "michigan": {
@@ -2546,7 +2812,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "mi-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Michigan",
+      stateSlug: "michigan",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "illinois": {
   name: "Illinois",
@@ -2611,7 +2891,20 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [ 
+    {
+      id: "il-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Illinois",
+      stateSlug: "illinois",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },],
 },
 
 "wisconsin": {
@@ -2677,7 +2970,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [ 
+    {
+      id: "wi-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Wisconsin",
+      stateSlug: "wisconsin",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "minnesota": {
@@ -2743,7 +3050,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "mn-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Minnesota",
+      stateSlug: "minnesota",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "iowa": {
   name: "Iowa",
@@ -2777,7 +3098,7 @@ pennsylvania: {
     counties: "99",
     incomerank: "33rd",
     medianincome: "71,400",
-    website: "Delaware.gov",
+    website: "Iowa.gov",
     electoral: "6 (6 Republicans)",
     nickname: "Hawkeye State"
   },
@@ -2808,7 +3129,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ia-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Iowa",
+      stateSlug: "iowa",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "missouri": {
@@ -2874,7 +3209,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [ 
+    {
+      id: "mo-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Missouri",
+      stateSlug: "missouri",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "kansas": {
@@ -2940,7 +3289,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ks-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Kansas",
+      stateSlug: "kansas",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "nebraska": {
   name: "Nebraska",
@@ -3005,7 +3368,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ne-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Nebraska",
+      stateSlug: "nebraska",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "oklahoma": {
@@ -3071,7 +3448,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ok-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Oklahoma",
+      stateSlug: "oklahoma",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "texas": {
@@ -3138,7 +3529,19 @@ pennsylvania: {
   ],
 
   representatives: [
-    
+    {
+      id: "tx-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Texas",
+      stateSlug: "texas",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
   ],
 },"north-dakota": {
   name: "North Dakota",
@@ -3203,7 +3606,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "nd-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "North Dakota",
+      stateSlug: "north-dakota",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "south-dakota": {
@@ -3269,7 +3686,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "sd-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "South Dakota",
+      stateSlug: "south-dakota",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "wyoming": {
@@ -3335,7 +3766,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "wy-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Wyoming",
+      stateSlug: "wyoming",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "colorado": {
   name: "Colorado",
@@ -3369,7 +3814,7 @@ pennsylvania: {
     counties: "64",
     incomerank: "9th",
     medianincome: "92,900",
-    website: "Delaware.gov",
+    website: "Colorado.gov",
     electoral: "10 (6 Democrats, 4 Republicans)",
     nickname: "The Centennial State"
   },
@@ -3400,7 +3845,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "co-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Colorado",
+      stateSlug: "colorado",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "utah": {
@@ -3466,7 +3925,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ut-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Utah",
+      stateSlug: "utah",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "new-mexico": {
@@ -3501,7 +3974,7 @@ pennsylvania: {
     counties: "33",
     incomerank: "43rd",
     medianincome: "62,300",
-    website: "Delaware.gov",
+    website: "nm.gov",
     electoral: "5 (5 Democrats)",
     nickname: "The Land of Enchantment"
   },
@@ -3532,7 +4005,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "nm-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "New Mexico",
+      stateSlug: "new-mexico",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "arizona": {
@@ -3597,7 +4084,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "az-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Arizona",
+      stateSlug: "arizona",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "nevada": {
@@ -3663,7 +4164,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "nv-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Nevada",
+      stateSlug: "nevada",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "california": {
   name: "California",
@@ -3728,7 +4243,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ca-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "California",
+      stateSlug: "california",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "oregon": {
@@ -3794,7 +4323,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "or-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Oregon",
+      stateSlug: "oregon",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "washington": {
@@ -3860,7 +4403,19 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [ {
+      id: "wa-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Washington",
+      stateSlug: "washington",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },],
 },
 
 "idaho": {
@@ -3926,7 +4481,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "id-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Idaho",
+      stateSlug: "idaho",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "montana": {
@@ -3992,7 +4561,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "mt-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Montana",
+      stateSlug: "montana",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 "alaska": {
   name: "Alaska",
@@ -4057,7 +4640,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "ak-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Alaska",
+      stateSlug: "alaska",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 
 "hawaii": {
@@ -4123,7 +4720,21 @@ pennsylvania: {
     },
   ],
 
-  representatives: [],
+  representatives: [
+    {
+      id: "hi-rep-1",
+      name: "",
+      title: "U.S. Representative",
+      state: "Hawaii",
+      stateSlug: "hawaii",
+      chamber: "house",
+      district: "1st District",
+      party: "",
+      website: "",
+      contactUrl: "",
+      photoUrl: "",
+    },
+  ],
 },
 };
 
