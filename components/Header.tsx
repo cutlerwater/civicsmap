@@ -15,7 +15,7 @@ export default function Header() {
           <Link href="/" className="hover:text-blue-900">
             States
           </Link>
-          <Link href="/" className="hover:text-blue-900">
+          <Link href="/about" className="hover:text-blue-900">
             About
           </Link>
           <Link href="/contact" className="text-sm font-medium text-slate-700 hover:text-slate-900">

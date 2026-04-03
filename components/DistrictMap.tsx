@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -136,7 +136,7 @@ export default function DistrictMap({
                     onClick={() => {
                         if (district) onDistrictSelect?.(district);
                     }}
-                    onKeyDown={(event) => {
+                    onKeyDown={(event: React.KeyboardEvent<SVGPathElement>) => {
                         if (!district) return;
 
                         if (event.key === "Enter" || event.key === " ") {
