@@ -15,110 +15,162 @@ type DistrictProperties = {
   label?: string;
 };
 
+type GeographyFeature = {
+  rsmKey: string;
+  properties: DistrictProperties;
+};
+
 type Props = {
   geoUrl: string;
   title?: string;
+  selectedDistrict?: string | null;
   onDistrictSelect?: (district: string) => void;
 };
+
+function normalizeDistrict(
+  value: string | number | null | undefined
+): string | null {
+  if (value === null || value === undefined) return null;
+
+  const str = String(value).trim();
+  if (!str) return null;
+
+  const digits = str.match(/\d+/)?.[0];
+  if (!digits) return null;
+
+  return String(Number(digits));
+}
+
+function getDistrictFromProperties(
+  properties: DistrictProperties
+): string | null {
+  return normalizeDistrict(
+    properties.DISTRICT ??
+      properties.district ??
+      properties.CD ??
+      properties.CD118FP ??
+      properties.label
+  );
+}
 
 export default function DistrictMap({
   geoUrl,
   title = "Congressional Districts",
+  selectedDistrict,
   onDistrictSelect,
 }: Props) {
-  const [hovered, setHovered] = useState<string | null>(null);
+  const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
 
   return (
-    <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
-            District Map
-          </p>
-          <h3 className="mt-1 text-2xl font-bold tracking-tight text-slate-900">
-            {title}
-          </h3>
-        </div>
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
 
-        <div className="rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-600 ring-1 ring-slate-200">
-          {hovered ?? "Hover over a district"}
+        <div className="text-sm text-slate-500">
+          {hoveredDistrict
+            ? `Hovering: District ${hoveredDistrict}`
+            : selectedDistrict
+              ? `Selected: District ${selectedDistrict}`
+              : "Select a district"}
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-        <ComposableMap
-          projection="geoMercator"
-          projectionConfig={{
-            scale: 8500,
-            center: [-77.45, 38.95],
-          }}
-          width={900}
-          height={600}
-          className="h-auto w-full"
-        >
-          <Geographies geography={geoUrl}>
-            {({ geographies }: { geographies: any[] }) =>
-                geographies.map((geo: any) => {
-                const props = geo.properties as DistrictProperties;
+      <div className="overflow-hidden rounded-xl bg-slate-50">
+        <div className="mx-auto max-w-3xl">
+          <ComposableMap
+            projection="geoMercator"
+            projectionConfig={{
+                center: [-76.7, 38.8],
+                scale: 7500,
+            }}
+            width={800}
+            height={500}
+            className="h-auto w-full"
+            >
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  const feature = geo as GeographyFeature;
+                  const district = getDistrictFromProperties(feature.properties);
 
-                const rawDistrict =
-                    props.DISTRICT ??
-                    props.district ??
-                    props.CD ??
-                    props.CD118FP ??
-                    "";
+                  const isSelected =
+                    !!district &&
+                    !!selectedDistrict &&
+                    district === selectedDistrict;
 
-                    const districtNumberMatch = String(rawDistrict).match(/\d+/);
-                    const districtNumber = districtNumberMatch
-                    ? String(Number(districtNumberMatch[0]))
-                    : "";
+                  const isHovered =
+                    !!district &&
+                    !!hoveredDistrict &&
+                    district === hoveredDistrict;
 
-                const label =
-                  props.label ||
-                  (districtNumber ? `District ${districtNumber}` : "District");
+                  const fill = isSelected
+                    ? "#2563eb"
+                    : isHovered
+                      ? "#93c5fd"
+                      : "#cbd5e1";
 
-                return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    className="cursor-pointer"
-                    onMouseEnter={() => setHovered(label)}
-                    onMouseLeave={() => setHovered(null)}
-                    onClick={() => {
-                      console.log("clicked district raw:", rawDistrict);
-                      console.log("clicked district normalized:", districtNumber);
-                      console.log("geo props:", props);
-
-                      if (districtNumber && onDistrictSelect) {
-                        onDistrictSelect(districtNumber);
+                  return (
+                    <Geography
+                      key={feature.rsmKey}
+                      geography={geo}
+                      role={district ? "button" : undefined}
+                      tabIndex={district ? 0 : -1}
+                      aria-label={
+                        district ? `Congressional District ${district}` : undefined
                       }
-                    }}
-                    style={{
-                      default: {
-                        fill: "#dbeafe",
-                        stroke: "#1e3a8a",
-                        strokeWidth: 1,
-                        outline: "none",
-                      },
-                      hover: {
-                        fill: "#cc0000",
-                        stroke: "#1e3a8a",
-                        strokeWidth: 1.5,
-                        outline: "none",
-                      },
-                      pressed: {
-                        fill: "#ff0000",
-                        stroke: "#1e3a8a",
-                        strokeWidth: 1.5,
-                        outline: "none",
-                      },
-                    }}
-                  />
-                );
-              })
-            }
-          </Geographies>
-        </ComposableMap>
+                      onMouseEnter={() => {
+                        if (district) setHoveredDistrict(district);
+                      }}
+                      onMouseLeave={() => {
+                        setHoveredDistrict(null);
+                      }}
+                      onFocus={() => {
+                        if (district) setHoveredDistrict(district);
+                      }}
+                      onBlur={() => {
+                        setHoveredDistrict(null);
+                      }}
+                      onClick={() => {
+                        if (district) onDistrictSelect?.(district);
+                      }}
+                      onKeyDown={(event) => {
+                        if (!district) return;
+
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          onDistrictSelect?.(district);
+                        }
+                      }}
+                      style={{
+                        default: {
+                          fill,
+                          outline: "none",
+                          stroke: "#ffffff",
+                          strokeWidth: 0.75,
+                          cursor: district ? "pointer" : "default",
+                        },
+                        hover: {
+                          fill: isSelected ? "#2563eb" : "#93c5fd",
+                          outline: "none",
+                          stroke: "#ffffff",
+                          strokeWidth: 0.75,
+                          cursor: district ? "pointer" : "default",
+                        },
+                        pressed: {
+                          fill: "#1d4ed8",
+                          outline: "none",
+                          stroke: "#ffffff",
+                          strokeWidth: 0.75,
+                          cursor: district ? "pointer" : "default",
+                        },
+                      }}
+                    />
+                  );
+                })
+              }
+            </Geographies>
+          </ComposableMap>
+        </div>
       </div>
     </div>
   );

@@ -22,26 +22,40 @@ export default function StatePage() {
   const data = getState(slug);
 
   const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
+
   const repRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const districtMapRef = useRef<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
-  if (!selectedDistrict) return;
+    if (!selectedDistrict) return;
 
-  const el = repRefs.current[selectedDistrict];
+    const el = repRefs.current[selectedDistrict];
 
-  console.log("selectedDistrict:", selectedDistrict);
-  console.log("repRefs keys:", Object.keys(repRefs.current));
-  console.log("rep ref element:", el);
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    }
+  }, [selectedDistrict]);
 
-  if (el) {
-    console.log("element top:", el.getBoundingClientRect().top);
-    el.scrollIntoView({
+  function handleRepresentativeClick(district?: string) {
+    const normalizedDistrict = normalizeDistrict(district);
+
+    if (!normalizedDistrict) return;
+
+    setSelectedDistrict(normalizedDistrict);
+
+    districtMapRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "center",
-      inline: "nearest",
     });
   }
-}, [selectedDistrict]);
+
+  function handleDistrictSelect(district: string) {
+    setSelectedDistrict(district);
+  }
 
   if (!data) {
     return (
@@ -64,7 +78,6 @@ export default function StatePage() {
 
   return (
     <main className="mx-auto max-w-7xl px-6 py-10 md:py-12">
-      {/* Back Link */}
       <div className="mb-6">
         <Link
           href="/"
@@ -73,12 +86,10 @@ export default function StatePage() {
           ← Back to map
         </Link>
       </div>
-<div className="mb-6 flex gap-3">
-  
-</div>
-      {/* HERO */}
+
+      <div className="mb-6 flex gap-3"></div>
+
       <section className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:shadow-md">
-        {/* BACKGROUND */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-100" />
           <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
@@ -86,7 +97,6 @@ export default function StatePage() {
         </div>
 
         <div className="relative grid gap-10 p-8 md:grid-cols-[1.4fr_1fr] md:p-12">
-          {/* LEFT SIDE */}
           <div className="transition duration-500">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-700">
               State Profile
@@ -141,7 +151,7 @@ export default function StatePage() {
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md"
-              >
+                >
                   Official Website
                 </a>
               )}
@@ -155,14 +165,13 @@ export default function StatePage() {
             </div>
           </div>
 
-          {/* RIGHT SIDE VISUALS */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {data.facts?.flagUrl && (
               <div className="group rounded-2xl border border-white/60 bg-white/70 p-5 shadow backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-xl">
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Flag
                 </p>
-                <div className="relative h-36 md:h-40 overflow-hidden rounded-lg">
+                <div className="relative h-36 overflow-hidden rounded-lg md:h-40">
                   <Image
                     src={data.facts.flagUrl}
                     alt={`${data.name} flag`}
@@ -179,7 +188,7 @@ export default function StatePage() {
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Seal
                 </p>
-                <div className="relative h-36 md:h-40 overflow-hidden rounded-lg">
+                <div className="relative h-36 overflow-hidden rounded-lg md:h-40">
                   <Image
                     src={data.facts.sealUrl}
                     alt={`${data.name} seal`}
@@ -191,13 +200,12 @@ export default function StatePage() {
               </div>
             )}
 
-            {/* MAP */}
             {data.facts?.mapUrl && (
               <div className="group rounded-2xl border border-white/60 bg-white/70 p-5 shadow backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-xl">
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Map
                 </p>
-                <div className="relative h-36 md:h-40 overflow-hidden rounded-lg">
+                <div className="relative h-36 overflow-hidden rounded-lg md:h-40">
                   <Image
                     src={data.facts.mapUrl}
                     alt={`${data.name} map`}
@@ -212,7 +220,6 @@ export default function StatePage() {
         </div>
       </section>
 
-      {/* QUICK FACTS */}
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         <QuickFact label="Capital" value={data.facts?.capital} />
         <QuickFact label="Largest City" value={data.facts?.largestcity} />
@@ -222,7 +229,6 @@ export default function StatePage() {
         <QuickFact label="Counties" value={data.facts?.counties} />
       </section>
 
-      {/* DETAIL CARDS */}
       <section className="mt-10 grid gap-6 lg:grid-cols-2">
         <InfoCard title="Government">
           <FactRow label="Governor" value={data.governor?.name} />
@@ -253,7 +259,6 @@ export default function StatePage() {
         </InfoCard>
       </section>
 
-      {/* OFFICIALS */}
       <section className="mt-12">
         <div className="mb-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
@@ -285,36 +290,37 @@ export default function StatePage() {
             </div>
           </div>
         )}
-        
-       {data.representatives?.length > 0 && (
+
+        {data.representatives?.length > 0 && (
           <div>
             <h3 className="mb-4 text-xl font-semibold text-slate-900">
               U.S. Representatives
             </h3>
+
             <p className="mb-4 text-sm text-slate-600">
-      Selected district: {selectedDistrict ?? "none"}
-    </p>
-            
+              Selected district : {selectedDistrict ?? "none"} (if you press on a box twice, you will be directed towards the congressional map automatically)
+            </p>
+
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {data.representatives.map((rep) => {
                 const normalizedRepDistrict = normalizeDistrict(rep.district);
-
                 const isSelected =
-                  selectedDistrict &&
-                  normalizedRepDistrict === String(selectedDistrict);
+                  !!selectedDistrict &&
+                  normalizedRepDistrict === selectedDistrict;
 
                 return (
                   <div
                     key={rep.name}
-                    ref={(el) => {
+                    ref={(el: HTMLDivElement | null) => {
                       if (normalizedRepDistrict) {
                         repRefs.current[normalizedRepDistrict] = el;
                       }
                     }}
-                    className={`rounded-2xl transition duration-300 ${
+                    onClick={() => handleRepresentativeClick(rep.district)}
+                    className={`cursor-pointer rounded-2xl transition duration-300 ${
                       isSelected
-                        ? "ring-2 ring-blue-500 ring-offset-2 shadow-lg bg-blue-50/40"
-                        : ""
+                        ? "bg-blue-50/40 ring-2 ring-blue-500 ring-offset-2 shadow-lg"
+                        : "hover:-translate-y-1 hover:shadow-md"
                     }`}
                   >
                     <OfficialCard official={rep} />
@@ -327,16 +333,19 @@ export default function StatePage() {
       </section>
 
       {slug === "maryland" && (
-        <section className="mt-12">
+        <section
+          ref={districtMapRef}
+          className="mb-10 mt-12 scroll-mt-24"
+        >
           <DistrictMap
             geoUrl="/geo/maryland-congressional-districts.geojson"
-            title="Maryland Congressional Districts"
-            onDistrictSelect={(district) => setSelectedDistrict(district)}
+            title="Maryland Congressional Districts (Select a district on the map to find out who that Congressman/woman is)"
+            selectedDistrict={selectedDistrict}
+            onDistrictSelect={handleDistrictSelect}
           />
-                  </section>
+        </section>
       )}
 
-      {/* BOTTOM NAV */}
       <section className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <p className="text-sm text-slate-600">
           Explore more state profiles and compare leadership across the country.
