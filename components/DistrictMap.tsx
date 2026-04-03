@@ -88,86 +88,89 @@ export default function DistrictMap({
             className="h-auto w-full"
             >
             <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const feature = geo as GeographyFeature;
-                  const district = getDistrictFromProperties(feature.properties);
+  {({
+    geographies,
+  }: {
+    geographies: GeographyFeature[];
+  }) =>
+    geographies.map((geo) => {
+      const district = getDistrictFromProperties(geo.properties);
 
-                  const isSelected =
-                    !!district &&
-                    !!selectedDistrict &&
-                    district === selectedDistrict;
+      const isSelected =
+        !!district &&
+        !!selectedDistrict &&
+        district === selectedDistrict;
 
-                  const isHovered =
-                    !!district &&
-                    !!hoveredDistrict &&
-                    district === hoveredDistrict;
+      const isHovered =
+        !!district &&
+        !!hoveredDistrict &&
+        district === hoveredDistrict;
 
-                  const fill = isSelected
-                    ? "#2563eb"
-                    : isHovered
-                      ? "#93c5fd"
-                      : "#cbd5e1";
+      const fill = isSelected
+        ? "#2563eb"
+        : isHovered
+          ? "#93c5fd"
+          : "#cbd5e1";
 
-                  return (
+      return (
                     <Geography
-                      key={feature.rsmKey}
-                      geography={geo}
-                      role={district ? "button" : undefined}
-                      tabIndex={district ? 0 : -1}
-                      aria-label={
+                    key={geo.rsmKey}
+                    geography={geo}
+                    role={district ? "button" : undefined}
+                    tabIndex={district ? 0 : -1}
+                    aria-label={
                         district ? `Congressional District ${district}` : undefined
-                      }
-                      onMouseEnter={() => {
+                    }
+                    onMouseEnter={() => {
                         if (district) setHoveredDistrict(district);
-                      }}
-                      onMouseLeave={() => {
+                    }}
+                    onMouseLeave={() => {
                         setHoveredDistrict(null);
-                      }}
-                      onFocus={() => {
+                    }}
+                    onFocus={() => {
                         if (district) setHoveredDistrict(district);
-                      }}
-                      onBlur={() => {
+                    }}
+                    onBlur={() => {
                         setHoveredDistrict(null);
-                      }}
-                      onClick={() => {
+                    }}
+                    onClick={() => {
                         if (district) onDistrictSelect?.(district);
-                      }}
-                      onKeyDown={(event) => {
+                    }}
+                    onKeyDown={(event) => {
                         if (!district) return;
 
                         if (event.key === "Enter" || event.key === " ") {
-                          event.preventDefault();
-                          onDistrictSelect?.(district);
+                        event.preventDefault();
+                        onDistrictSelect?.(district);
                         }
-                      }}
-                      style={{
+                    }}
+                    style={{
                         default: {
-                          fill,
-                          outline: "none",
-                          stroke: "#ffffff",
-                          strokeWidth: 0.75,
-                          cursor: district ? "pointer" : "default",
+                        fill,
+                        outline: "none",
+                        stroke: "#ffffff",
+                        strokeWidth: 0.75,
+                        cursor: district ? "pointer" : "default",
                         },
                         hover: {
-                          fill: isSelected ? "#2563eb" : "#93c5fd",
-                          outline: "none",
-                          stroke: "#ffffff",
-                          strokeWidth: 0.75,
-                          cursor: district ? "pointer" : "default",
+                        fill: isSelected ? "#2563eb" : "#93c5fd",
+                        outline: "none",
+                        stroke: "#ffffff",
+                        strokeWidth: 0.75,
+                        cursor: district ? "pointer" : "default",
                         },
                         pressed: {
-                          fill: "#1d4ed8",
-                          outline: "none",
-                          stroke: "#ffffff",
-                          strokeWidth: 0.75,
-                          cursor: district ? "pointer" : "default",
+                        fill: "#1d4ed8",
+                        outline: "none",
+                        stroke: "#ffffff",
+                        strokeWidth: 0.75,
+                        cursor: district ? "pointer" : "default",
                         },
-                      }}
+                    }}
                     />
-                  );
+                );
                 })
-              }
+            }
             </Geographies>
           </ComposableMap>
         </div>
