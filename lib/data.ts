@@ -3823,7 +3823,7 @@ pennsylvania: {
   },
   facts: {
     capital: "Austin",
-    population: "31,709,821[ ⬆️",
+    population: "31,709,821 ⬆️",
     area: "268,597 sq mi",
     statehood: "December 29, 1845 (28th)",
     flagUrl: "/flags/Texas.png",
