@@ -2766,7 +2766,7 @@ pennsylvania: {
     },
     {
       id: "ga-rep-13",
-      name: "Vacant",
+      name: "Vacant-GA13",
       title: "U.S. Representative",
       state: "Georgia",
       stateSlug: "georgia",
@@ -3105,7 +3105,7 @@ pennsylvania: {
     },
     {
       id: "fl-rep-20",
-      name: "Vacant",
+      name: "Vacant-FL20",
       title: "U.S. Representative",
       state: "Florida",
       stateSlug: "florida",
@@ -6392,7 +6392,7 @@ pennsylvania: {
     },
     {
       id: "tx-rep-23",
-      name: "Vacant",
+      name: "Vacant-tx23",
       title: "U.S. Representative",
       state: "Texas",
       stateSlug: "texas",
@@ -7601,7 +7601,7 @@ pennsylvania: {
   representatives: [
     {
       id: "ca-rep-1",
-      name: "Vacant",
+      name: "Vacant-CA1",
       title: "U.S. Representative",
       state: "California",
       stateSlug: "california",
@@ -7770,7 +7770,7 @@ pennsylvania: {
     },
     {
       id: "ca-rep-14",
-      name: "Vacant",
+      name: "Vacant-CA14",
       title: "U.S. Representative",
       state: "California",
       stateSlug: "california",

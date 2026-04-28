@@ -95,7 +95,172 @@ const stateMapConfig: Record<
   florida: {
     geoUrl: "/geo/maps/fl2008.json",
     center: [-82.8, 28.1],
+    scale: 3150,
+  },
+  texas: {
+    geoUrl: "/geo/maps/tx2008.json",
+    center: [-99.5, 31.0],
+    scale: 2000,
+  },
+  california: {
+    geoUrl: "/geo/maps/ca2008.json",
+    center: [-119.5, 37.2],
+    scale: 2300,
+  },
+  ohio: {
+    geoUrl: "/geo/maps/oh2008.json",
+    center: [-82.8, 40.3],
+    scale: 6500,
+  },
+  michigan: {
+    geoUrl: "/geo/maps/mi2008.json",
+    center: [-85.6, 44.2],
+    scale: 3500,
+  },
+  illinois: {
+    geoUrl: "/geo/maps/il2008.json",
+    center: [-89.2, 40.1],
+    scale: 3600,
+  },
+  indiana: {
+    geoUrl: "/geo/maps/in2008.json",
+    center: [-86.2, 39.9],
+    scale: 6500,
+  },
+  wisconsin: {
+    geoUrl: "/geo/maps/wi2008.json",
+    center: [-89.8, 44.6],
+    scale: 3600,
+  },
+  minnesota: {
+    geoUrl: "/geo/maps/mn2008.json",
+    center: [-94.3, 46.2],
     scale: 4300,
+  },
+  iowa: {
+    geoUrl: "/geo/maps/ia2008.json",
+    center: [-93.5, 42.1],
+    scale: 6000,
+  },
+  missouri: {
+    geoUrl: "/geo/maps/mo2008.json",
+    center: [-92.5, 38.5],
+    scale: 5200,
+  },
+  arkansas: {
+    geoUrl: "/geo/maps/ar2008.json",
+    center: [-92.4, 34.9],
+    scale: 5800,
+  },
+  louisiana: {
+    geoUrl: "/geo/maps/la2008.json",
+    center: [-91.9, 31.0],
+    scale: 5600,
+  },
+  mississippi: {
+    geoUrl: "/geo/maps/ms2008.json",
+    center: [-89.7, 32.7],
+    scale: 6200,
+  },
+  alabama: {
+    geoUrl: "/geo/maps/al2008.json",
+    center: [-86.8, 32.8],
+    scale: 6000,
+  },
+  tennessee: {
+    geoUrl: "/geo/maps/tn2008.json",
+    center: [-86.3, 35.8],
+    scale: 5200,
+  },
+  kentucky: {
+    geoUrl: "/geo/maps/ky2008.json",
+    center: [-85.3, 37.7],
+    scale: 5600,
+  },
+  oklahoma: {
+    geoUrl: "/geo/maps/ok2008.json",
+    center: [-97.5, 35.5],
+    scale: 5200,
+  },
+  kansas: {
+    geoUrl: "/geo/maps/ks2008.json",
+    center: [-98.4, 38.5],
+    scale: 5200,
+  },
+  nebraska: {
+    geoUrl: "/geo/maps/ne2008.json",
+    center: [-99.8, 41.5],
+    scale: 4800,
+  },
+  "south-dakota": {
+    geoUrl: "/geo/maps/sd2008.json",
+    center: [-100.2, 44.4],
+    scale: 4300,
+  },
+  "north-dakota": {
+    geoUrl: "/geo/maps/nd2008.json",
+    center: [-100.5, 47.5],
+    scale: 4300,
+  },
+  montana: {
+    geoUrl: "/geo/maps/mt2008.json",
+    center: [-109.6, 47.0],
+    scale: 3100,
+  },
+  wyoming: {
+    geoUrl: "/geo/maps/wy2008.json",
+    center: [-107.5, 43.0],
+    scale: 4300,
+  },
+  colorado: {
+    geoUrl: "/geo/maps/co2008.json",
+    center: [-105.5, 39.0],
+    scale: 4800,
+  },
+  "new-mexico": {
+    geoUrl: "/geo/maps/nm2008.json",
+    center: [-106.1, 34.5],
+    scale: 4800,
+  },
+  arizona: {
+    geoUrl: "/geo/maps/az2008.json",
+    center: [-111.8, 34.2],
+    scale: 4800,
+  },
+  utah: {
+    geoUrl: "/geo/maps/ut2008.json",
+    center: [-111.7, 39.3],
+    scale: 4300,
+  },
+  nevada: {
+    geoUrl: "/geo/maps/nv2008.json",
+    center: [-116.8, 39.4],
+    scale: 2000,
+  },
+  idaho: {
+    geoUrl: "/geo/maps/id2008.json",
+    center: [-114.5, 44.2],
+    scale: 4300,
+  },
+  oregon: {
+    geoUrl: "/geo/maps/or2008.json",
+    center: [-120.5, 44.0],
+    scale: 4300,
+  },
+  washington: {
+    geoUrl: "/geo/maps/wa2008.json",
+    center: [-120.5, 47.4],
+    scale: 4800,
+  },
+  alaska: {
+    geoUrl: "/geo/maps/ak2008.json",
+    center: [-152.0, 64.0],
+    scale: 600,
+  },
+  hawaii: {
+    geoUrl: "/geo/maps/hi2008.json",
+    center: [-157.5, 20.8],
+    scale: 6000,
   },
 };
 
