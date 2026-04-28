@@ -32,6 +32,71 @@ const stateMapConfig: Record<
     center: [-75.4, 42.8],
     scale: 5000,
   },
+  pennsylvania: {
+    geoUrl: "/geo/maps/pa2008.json",
+    center: [-77.7, 40.9],
+    scale: 8500,
+  },
+  delaware: {
+    geoUrl: "/geo/maps/del2008.json",
+    center: [-75.5, 39.0],
+    scale: 18000,
+  },
+  "north-carolina": {
+    geoUrl: "/geo/maps/nc2008.json",
+    center: [-79.0, 35.5],
+    scale: 4500,
+  },
+  maine: {
+    geoUrl: "/geo/maps/me2008.json",
+    center: [-69.0, 45.2],
+    scale: 4600,
+  },
+  "new-hampshire": {
+    geoUrl: "/geo/maps/nh2008.json",
+    center: [-71.6, 43.8],
+    scale: 9500,
+  },
+  vermont: {
+    geoUrl: "/geo/maps/vt2008.json",
+    center: [-72.7, 44.0],
+    scale: 9500,
+  },
+  massachusetts: {
+    geoUrl: "/geo/maps/mass2008.json",
+    center: [-71.8, 42.2],
+    scale: 12000,
+  },
+  "rhode-island": {
+    geoUrl: "/geo/maps/ri2008.json",
+    center: [-71.5, 41.7],
+    scale: 30000,
+  },
+  connecticut: {
+    geoUrl: "/geo/maps/ct2008.json",
+    center: [-72.7, 41.6],
+    scale: 16000,
+  },
+  "west-virginia": {
+    geoUrl: "/geo/maps/wv2008.json",
+    center: [-80.6, 38.6],
+    scale: 7000,
+  },
+  "south-carolina": {
+    geoUrl: "/geo/maps/sc2008.json",
+    center: [-80.9, 33.9],
+    scale: 7000,
+  },
+  georgia: {
+    geoUrl: "/geo/maps/ga2008.json",
+    center: [-83.5, 32.7],
+    scale: 6000,
+  },
+  florida: {
+    geoUrl: "/geo/maps/fl2008.json",
+    center: [-82.8, 28.1],
+    scale: 4300,
+  },
 };
 
 function normalizeDistrict(value?: string) {

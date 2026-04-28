@@ -188,7 +188,7 @@ export default function DistrictMap({
               cursor: district ? "pointer" : "default",
             },
             hover: {
-              fill: isSelected ? "#2563eb" : "#93c5fd",
+              fill: isSelected ? "#ff1100" : "#116633",
               fillOpacity: 0.75,
               outline: "none",
               stroke: "#ffffff",
@@ -196,7 +196,7 @@ export default function DistrictMap({
               cursor: district ? "pointer" : "default",
             },
             pressed: {
-              fill: "#1d4ed8",
+              fill: "#ff1100",
               fillOpacity: 0.75,
               outline: "none",
               stroke: "#ffffff",
