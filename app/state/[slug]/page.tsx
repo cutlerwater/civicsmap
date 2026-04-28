@@ -8,6 +8,32 @@ import { getState } from "@/lib/data";
 import OfficialCard from "@/components/OfficialCard";
 import DistrictMap from "@/components/DistrictMap";
 
+const stateMapConfig: Record<
+  string,
+  { geoUrl: string; center: [number, number]; scale: number }
+> = {
+  maryland: {
+    geoUrl: "/geo/maps/maryland-congressional-districts.geojson",
+    center: [-76.7, 38.8],
+    scale: 7500,
+  },
+  virginia: {
+    geoUrl: "/geo/maps/fixedvirginia-districts.json",
+    center: [-78.8, 37.7],
+    scale: 6000,
+  },
+  "new-jersey": {
+    geoUrl: "/geo/maps/nj2008.json",
+    center: [-74.6, 40.1],
+    scale: 8500,
+  },
+  "new-york": {
+    geoUrl: "/geo/maps/nydistricts2008.json",
+    center: [-75.4, 42.8],
+    scale: 5000,
+  },
+};
+
 function normalizeDistrict(value?: string) {
   if (!value) return "";
 
@@ -332,16 +358,19 @@ export default function StatePage() {
         )}
       </section>
 
-      {slug === "maryland" && (
+      {stateMapConfig[slug] && (
         <section
           ref={districtMapRef}
           className="mb-10 mt-12 scroll-mt-24"
         >
           <DistrictMap
-            geoUrl="/geo/maryland-congressional-districts.geojson"
-            title="Maryland Congressional Districts (Select a district on the map to find out who that Congressman/woman is)"
+            geoUrl={stateMapConfig[slug].geoUrl}
+            title={`${slug.charAt(0).toUpperCase() + slug.slice(1)
+              } Congressional Districts (Select a district on the map to find out who that Congressman/woman is)`}
             selectedDistrict={selectedDistrict}
             onDistrictSelect={handleDistrictSelect}
+            center={stateMapConfig[slug].center}
+            scale={stateMapConfig[slug].scale}
           />
         </section>
       )}

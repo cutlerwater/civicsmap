@@ -12,12 +12,18 @@ type DistrictProperties = {
   district?: string;
   CD?: string;
   CD118FP?: string;
+  CD119?: string;
+  BASENAME?: string;
   label?: string;
+  [key: string]: string | number | null | undefined;
 };
 
 type GeographyFeature = {
   rsmKey: string;
   properties: DistrictProperties;
+  geometry?: {
+    type?: string;
+  };
 };
 
 type Props = {
@@ -25,7 +31,11 @@ type Props = {
   title?: string;
   selectedDistrict?: string | null;
   onDistrictSelect?: (district: string) => void;
+  center?: [number, number];
+  scale?: number;
 };
+
+
 
 function normalizeDistrict(
   value: string | number | null | undefined
@@ -44,12 +54,19 @@ function normalizeDistrict(
 function getDistrictFromProperties(
   properties: DistrictProperties
 ): string | null {
+  const cdField = Object.keys(properties).find((key) =>
+    /^CD\d+/.test(key)
+  );
+
   return normalizeDistrict(
     properties.DISTRICT ??
-      properties.district ??
-      properties.CD ??
-      properties.CD118FP ??
-      properties.label
+    properties.district ??
+    properties.CD ??
+    properties.CD119 ??
+    properties.CD118FP ??
+    (cdField ? properties[cdField] : undefined) ??
+    properties.BASENAME ??
+    properties.label
   );
 }
 
@@ -58,9 +75,11 @@ export default function DistrictMap({
   title = "Congressional Districts",
   selectedDistrict,
   onDistrictSelect,
+  center = [-98, 39],
+  scale = 900,
 }: Props) {
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
-
+  const normalizedSelectedDistrict = normalizeDistrict(selectedDistrict);
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
       <div className="mb-3 flex items-center justify-between gap-3">
@@ -80,26 +99,39 @@ export default function DistrictMap({
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
-                center: [-76.7, 38.8],
-                scale: 7500,
+              center,
+              scale,
             }}
             width={800}
             height={500}
             className="h-auto w-full"
-            >
+          >
             <Geographies geography={geoUrl}>
   {({
     geographies,
   }: {
     geographies: GeographyFeature[];
   }) =>
-    geographies.map((geo) => {
-      const district = getDistrictFromProperties(geo.properties);
+                geographies
+                  .slice()
+                  .sort((a, b) => {
+                    const da = getDistrictFromProperties(a.properties);
+                    const db = getDistrictFromProperties(b.properties);
 
-      const isSelected =
-        !!district &&
-        !!selectedDistrict &&
-        district === selectedDistrict;
+                    if (da === normalizedSelectedDistrict) return 1;
+                    if (db === normalizedSelectedDistrict) return -1;
+                    return 0;
+                  })
+                  .map((geo, index) => {
+                  const district = getDistrictFromProperties(geo.properties);
+                  
+
+                  
+
+                  const isSelected =
+                    !!district &&
+                    !!normalizedSelectedDistrict &&
+                    district === normalizedSelectedDistrict;
 
       const isHovered =
         !!district &&
@@ -116,6 +148,8 @@ export default function DistrictMap({
                     <Geography
                     key={geo.rsmKey}
                     geography={geo}
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     role={district ? "button" : undefined}
                     tabIndex={district ? 0 : -1}
                     aria-label={
@@ -144,29 +178,32 @@ export default function DistrictMap({
                         onDistrictSelect?.(district);
                         }
                     }}
-                    style={{
-                        default: {
-                        fill,
-                        outline: "none",
-                        stroke: "#ffffff",
-                        strokeWidth: 0.75,
-                        cursor: district ? "pointer" : "default",
-                        },
-                        hover: {
-                        fill: isSelected ? "#2563eb" : "#93c5fd",
-                        outline: "none",
-                        stroke: "#ffffff",
-                        strokeWidth: 0.75,
-                        cursor: district ? "pointer" : "default",
-                        },
-                        pressed: {
-                        fill: "#1d4ed8",
-                        outline: "none",
-                        stroke: "#ffffff",
-                        strokeWidth: 0.75,
-                        cursor: district ? "pointer" : "default",
-                        },
-                    }}
+          style={{
+            default: {
+              fill,
+              fillOpacity: 0.75,
+              outline: "none",
+              stroke: "#ffffff",
+              strokeWidth: 0.75,
+              cursor: district ? "pointer" : "default",
+            },
+            hover: {
+              fill: isSelected ? "#2563eb" : "#93c5fd",
+              fillOpacity: 0.75,
+              outline: "none",
+              stroke: "#ffffff",
+              strokeWidth: 0.75,
+              cursor: district ? "pointer" : "default",
+            },
+            pressed: {
+              fill: "#1d4ed8",
+              fillOpacity: 0.75,
+              outline: "none",
+              stroke: "#ffffff",
+              strokeWidth: 0.75,
+              cursor: district ? "pointer" : "default",
+            },
+          }}
                     />
                 );
                 })
