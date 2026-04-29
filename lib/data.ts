@@ -7369,7 +7369,7 @@ pennsylvania: {
       state: "Arizona",
       stateSlug: "arizona",
       chamber: "house",
-      district: "1st District",
+      district: "6th District",
       party: "Republican",
       website: "https://ciscomani.house.gov/",
       contactUrl: "https://ciscomani.house.gov/contact",

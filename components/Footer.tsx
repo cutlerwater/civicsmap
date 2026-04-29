@@ -56,6 +56,18 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <a
+                  href="https://www.cigarshopfinder.live/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-400 hover:text-white"
+                >
+                  <User className="h-4 w-4" />
+                  Cigar Shop Finder
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://albums-catalog.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
