@@ -11,45 +11,57 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-white/10 bg-slate-950">
+    <footer className="mt-20 border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-3">
+          {/* Brand / Description */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
-              Cutlerwater Civics Map
+            <h3 className="text-lg font-semibold text-slate-900">
+              Civic Explorer
             </h3>
-            <p className="mt-3 text-sm leading-6 text-slate-400">
+            <p className="mt-3 text-sm leading-6 text-slate-600">
               A modern, map-based experience for exploring U.S. states,
-              government officials, congressional districts, and civic
-              information in a clean, accessible format.
+              government officials, and civic information in a clean,
+              accessible format.
             </p>
           </div>
 
+          {/* Navigation */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
               Navigation
             </h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-slate-400 hover:text-white">
+                <Link
+                  href="/"
+                  className="text-slate-600 hover:text-slate-900"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-400 hover:text-white">
+                <Link
+                  href="/about"
+                  className="text-slate-600 hover:text-slate-900"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-400 hover:text-white">
+                <Link
+                  href="/contact"
+                  className="text-slate-600 hover:text-slate-900"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* External Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
               Projects & Links
             </h4>
 
@@ -59,7 +71,7 @@ export default function Footer() {
                   href="https://albums-catalog.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-slate-400 hover:text-white"
+                  className="flex items-center gap-2 text-slate-600 hover:text-slate-900"
                 >
                   <Music className="h-4 w-4" />
                   Albums Catalog
@@ -72,7 +84,7 @@ export default function Footer() {
                   href="https://cutlerwater-profile.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-slate-400 hover:text-white"
+                  className="flex items-center gap-2 text-slate-600 hover:text-slate-900"
                 >
                   <User className="h-4 w-4" />
                   My Profile
@@ -85,7 +97,7 @@ export default function Footer() {
                   href="https://www.facebook.com/profile.php?id=61583064705126"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-slate-400 hover:text-white"
+                  className="flex items-center gap-2 text-slate-600 hover:text-slate-900"
                 >
                   <Globe className="h-4 w-4" />
                   Facebook
@@ -93,10 +105,11 @@ export default function Footer() {
                 </a>
               </li>
 
+              {/* Optional future links */}
               <li>
                 <a
-                  href="mailto:cutlerwater2@live.com"
-                  className="flex items-center gap-2 text-slate-400 hover:text-white"
+                  href="cutlerwater2@live.com"
+                  className="flex items-center gap-2 text-slate-600 hover:text-slate-900"
                 >
                   <Mail className="h-4 w-4" />
                   Contact Email
@@ -106,16 +119,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        {/* Bottom bar */}
+        <div className="mt-10 border-t border-slate-200 pt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} Cutlerwater Civics Map. All rights reserved.
           </p>
 
           <div className="flex gap-4 text-xs text-slate-500">
-            <Link href="/about" className="hover:text-slate-300">
+            <Link href="/about" className="hover:text-slate-700">
               About
             </Link>
-            <Link href="/contact" className="hover:text-slate-300">
+            <Link href="/contact" className="hover:text-slate-700">
               Contact
             </Link>
           </div>

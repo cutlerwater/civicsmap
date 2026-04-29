@@ -26,6 +26,11 @@ type GeographyFeature = {
   };
 };
 
+type Representative = {
+  district?: string | number | null;
+  party?: string | null;
+};
+
 type Props = {
   geoUrl: string;
   title?: string;
@@ -33,9 +38,42 @@ type Props = {
   onDistrictSelect?: (district: string) => void;
   center?: [number, number];
   scale?: number;
+
+  representatives: Representative[];
 };
 
+const PARTY_COLORS: Record<string, string> = {
+  Democratic: "#2563eb",
+  Democrat: "#2563eb",
+  D: "#2563eb",
 
+  Republican: "#dc2626",
+  R: "#dc2626",
+
+  Independent: "#9333ea",
+  I: "#9333ea",
+
+  Vacant: "#737373",
+  Vacancy: "#737373",
+};
+
+function getPartyColor(party?: string | null) {
+  if (!party) return PARTY_COLORS.Vacant;
+  return PARTY_COLORS[party] ?? "#64748b";
+}
+
+function getPartyForDistrict(
+  district: string | null,
+  representatives: { district?: string | number | null; party?: string | null }[]
+) {
+  if (!district) return "Vacant";
+
+  const rep = representatives.find(
+    (person) => normalizeDistrict(person.district) === district
+  );
+
+  return rep?.party ?? "Vacant";
+}
 
 function normalizeDistrict(
   value: string | number | null | undefined
@@ -70,15 +108,38 @@ function getDistrictFromProperties(
   );
 }
 
+function getRepresentativeForDistrict(
+  district: string | null,
+  representatives: {
+    name?: string;
+    district?: string | number | null;
+    party?: string | null;
+  }[]
+) {
+  if (!district) return null;
+
+  return representatives.find(
+    (person) => normalizeDistrict(person.district) === district
+  );
+}
+
 export default function DistrictMap({
   geoUrl,
-  title = "Congressional Districts",
+  title,
   selectedDistrict,
   onDistrictSelect,
-  center = [-98, 39],
-  scale = 900,
+  center,
+  scale,
+  representatives,
 }: Props) {
-  const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
+  const [hoveredDistrict, setHoveredDistrict] = useState<{
+    district: string;
+    x: number;
+    y: number;
+    name?: string;
+    party?: string;
+  } | null>(null);
+
   const normalizedSelectedDistrict = normalizeDistrict(selectedDistrict);
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -107,109 +168,116 @@ export default function DistrictMap({
             className="h-auto w-full"
           >
             <Geographies geography={geoUrl}>
-  {({
-    geographies,
-  }: {
-    geographies: GeographyFeature[];
-  }) =>
-                geographies
-                  .slice()
-                  .sort((a, b) => {
-                    const da = getDistrictFromProperties(a.properties);
-                    const db = getDistrictFromProperties(b.properties);
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  // 👇 PUT IT RIGHT HERE (inside map, before return)
 
-                    if (da === normalizedSelectedDistrict) return 1;
-                    if (db === normalizedSelectedDistrict) return -1;
-                    return 0;
-                  })
-                  .map((geo, index) => {
                   const district = getDistrictFromProperties(geo.properties);
-                  
+                  const isValidDistrict = !!district && district !== "0";
 
-                  
+                  const party = isValidDistrict
+                    ? getPartyForDistrict(district, representatives)
+                    : "Vacant";
+                  const fill = getPartyColor(party);
+                  const isSelected = selectedDistrict === district;
+                  const rep = getRepresentativeForDistrict(district, representatives);
 
-                  const isSelected =
-                    !!district &&
-                    !!normalizedSelectedDistrict &&
-                    district === normalizedSelectedDistrict;
-
-      const isHovered =
-        !!district &&
-        !!hoveredDistrict &&
-        district === hoveredDistrict;
-
-      const fill = isSelected
-        ? "#2563eb"
-        : isHovered
-          ? "#93c5fd"
-          : "#cbd5e1";
-
-      return (
+                  // 👇 then return Geography
+                  return (
                     <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    role={district ? "button" : undefined}
-                    tabIndex={district ? 0 : -1}
-                    aria-label={
-                        district ? `Congressional District ${district}` : undefined
-                    }
-                    onMouseEnter={() => {
-                        if (district) setHoveredDistrict(district);
-                    }}
-                    onMouseLeave={() => {
-                        setHoveredDistrict(null);
-                    }}
-                    onFocus={() => {
-                        if (district) setHoveredDistrict(district);
-                    }}
-                    onBlur={() => {
-                        setHoveredDistrict(null);
-                    }}
-                    onClick={() => {
-                        if (district) onDistrictSelect?.(district);
-                    }}
-                    onKeyDown={(event: React.KeyboardEvent<SVGPathElement>) => {
+                      key={geo.rsmKey}
+                      geography={geo}
+                      onMouseEnter={(event) => {
                         if (!district) return;
 
-                        if (event.key === "Enter" || event.key === " ") {
-                        event.preventDefault();
-                        onDistrictSelect?.(district);
-                        }
-                    }}
-          style={{
-            default: {
-              fill,
-              fillOpacity: 0.75,
-              outline: "none",
-              stroke: "#ffffff",
-              strokeWidth: 0.75,
-              cursor: district ? "pointer" : "default",
-            },
-            hover: {
-              fill: isSelected ? "#ff1100" : "#116633",
-              fillOpacity: 0.75,
-              outline: "none",
-              stroke: "#ffffff",
-              strokeWidth: 0.75,
-              cursor: district ? "pointer" : "default",
-            },
-            pressed: {
-              fill: "#ff1100",
-              fillOpacity: 0.75,
-              outline: "none",
-              stroke: "#ffffff",
-              strokeWidth: 0.75,
-              cursor: district ? "pointer" : "default",
-            },
-          }}
+                        setHoveredDistrict({
+                          district,
+                          x: event.clientX,
+                          y: event.clientY,
+                          name: rep?.name,
+                          party: rep?.party,
+                        });
+                      }}
+                      onMouseMove={(event) => {
+                        setHoveredDistrict((current) =>
+                          current
+                            ? {
+                              ...current,
+                              x: event.clientX,
+                              y: event.clientY,
+                            }
+                            : current
+                        );
+                      }}
+                      onMouseLeave={() => setHoveredDistrict(null)}
+                      onClick={() => {
+                        if (district) onDistrictSelect?.(district);
+                      }}
+                      style={{
+                        default: {
+                          fill,
+                          fillOpacity: 0.85,
+                          stroke: selectedDistrict === district ? "#facc15" : "#0f172a",
+                          strokeWidth: selectedDistrict === district ? 1.4 : 0.5,
+                          filter:
+                            selectedDistrict === district
+                              ? "drop-shadow(0 0 7px rgba(250, 204, 21, 0.65))"
+                              : "none",
+                          animation:
+                            selectedDistrict === district
+                              ? "districtPulse 2.4s ease-in-out infinite"
+                              : "none",
+                          outline: "none",
+                          cursor: district ? "pointer" : "default",
+                        },
+                        hover: {
+                          fill,
+                          fillOpacity: 0.9,
+                          filter:
+                            selectedDistrict === district
+                              ? "drop-shadow(0 0 9px rgba(250, 204, 21, 0.8)) brightness(1.12)"
+                              : "brightness(1.12)",
+                          stroke: "#facc15",
+                          strokeWidth: 1.2,
+                          outline: "none",
+                          cursor: district ? "pointer" : "default",
+                        },
+                        pressed: {
+                          fill,
+                          fillOpacity: 0.9,
+                          stroke: "#facc15",
+                          strokeWidth: 1.6,
+                          filter: "drop-shadow(0 0 10px rgba(250, 204, 21, 0.9))",
+                          outline: "none",
+                          cursor: district ? "pointer" : "default",
+                        },
+                      }}
                     />
-                );
+                  );
                 })
-            }
+              }
             </Geographies>
           </ComposableMap>
+          <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-600">
+            <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2">
+              <span className="h-4 w-4 rounded-full bg-red-600" />
+              Republican
+            </span>
+              <span className="h-4 w-4 rounded-full bg-blue-600" />
+              Democratic
+            </span>
+            
+            <span className="flex items-center gap-2">
+              <span className="h-4 w-4 rounded-full bg-purple-600" />
+              Independent
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="h-4 w-4 rounded-full bg-gray-500" />
+              Vacant
+            </span>
+            
+          </div>
         </div>
       </div>
     </div>

@@ -60,7 +60,7 @@ export default function Home() {
                   </h2>
                 </div>
 
-                <div className="hidden rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300 sm:block">
+                <div className="hidden rounded-full border border-white/10 bg-black/5 px-3 py-1 text-xs font-medium text-blue-700 md:block">
                   Select a state
                 </div>
               </div>

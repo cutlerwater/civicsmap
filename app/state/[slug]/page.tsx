@@ -215,7 +215,7 @@ const stateMapConfig: Record<
   colorado: {
     geoUrl: "/geo/maps/co2008.json",
     center: [-105.5, 39.0],
-    scale: 4800,
+    scale: 4200,
   },
   "new-mexico": {
     geoUrl: "/geo/maps/nm2008.json",
@@ -331,7 +331,7 @@ export default function StatePage() {
       </main>
     );
   }
-
+  const mapConfig = stateMapConfig[slug as keyof typeof stateMapConfig];
   return (
     <main className="mx-auto max-w-7xl px-6 py-10 md:py-12">
       <div className="mb-6">
@@ -563,7 +563,7 @@ export default function StatePage() {
                 const isSelected =
                   !!selectedDistrict &&
                   normalizedRepDistrict === selectedDistrict;
-
+                
                 return (
                   <div
                     key={rep.name}
@@ -588,19 +588,19 @@ export default function StatePage() {
         )}
       </section>
 
-      {stateMapConfig[slug] && (
+      {mapConfig && (
         <section
           ref={districtMapRef}
           className="mb-10 mt-12 scroll-mt-24"
         >
           <DistrictMap
-            geoUrl={stateMapConfig[slug].geoUrl}
-            title={`${slug.charAt(0).toUpperCase() + slug.slice(1)
-              } Congressional Districts (Select a district on the map to find out who that Congressman/woman is)`}
+            geoUrl={mapConfig.geoUrl}
+            title={`${data.name} Congressional Districts`}
             selectedDistrict={selectedDistrict}
-            onDistrictSelect={handleDistrictSelect}
-            center={stateMapConfig[slug].center}
-            scale={stateMapConfig[slug].scale}
+            onDistrictSelect={setSelectedDistrict}
+            center={mapConfig.center}
+            scale={mapConfig.scale}
+            representatives={data.representatives}
           />
         </section>
       )}

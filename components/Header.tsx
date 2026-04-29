@@ -1,18 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-
-        {/* LEFT: Branding */}
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center gap-3">
-          <div className="text-lg font-semibold tracking-tight text-white">
-            Cutlerwater
-          </div>
-          <div className="hidden text-xs uppercase tracking-[0.25em] text-blue-400 md:block">
-            Civics Map
-          </div>
+          <Image
+            src="/images/CutlerwaterCivicsMapLogo.png"
+            alt="Cutlerwater Civics Map"
+            width={220}
+            height={72}
+            priority
+            className="h-auto w-[180px] md:w-[220px]"
+          />
         </Link>
 
         {/* CENTER: Navigation */}
