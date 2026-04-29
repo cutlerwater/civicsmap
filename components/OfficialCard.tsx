@@ -166,7 +166,7 @@ export default function OfficialCard({
 
             {official.district && (
               <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">
-                District {official.district}
+                {official.district}
               </span>
             )}
           </div>

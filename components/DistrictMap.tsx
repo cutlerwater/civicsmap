@@ -28,10 +28,10 @@ type GeographyFeature = {
 };
 
 type Representative = {
+  name?: string;
   district?: string | number | null;
   party?: string | null;
 };
-
 type GeographiesRenderProps = {
   geographies: GeographyFeature[];
 };
@@ -145,7 +145,7 @@ export default function DistrictMap({
     party?: string;
   } | null>(null);
 
-  const normalizedSelectedDistrict = normalizeDistrict(selectedDistrict);
+  
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
       <div className="mb-3 flex items-center justify-between gap-3">
@@ -153,7 +153,7 @@ export default function DistrictMap({
 
         <div className="text-sm text-slate-500">
           {hoveredDistrict
-            ? `Hovering: District ${hoveredDistrict}`
+            ? `Hovering: District ${hoveredDistrict.district}`
             : selectedDistrict
               ? `Selected: District ${selectedDistrict}`
               : "Select a district"}
@@ -193,10 +193,10 @@ export default function DistrictMap({
                       key={geo.rsmKey}
                       geography={geo}
                       onMouseEnter={(event: MouseEvent<SVGPathElement>) => {
-                        if (!district) return;
+                       
 
                         setHoveredDistrict({
-                          district,
+                          district: district ?? "unknown",
                           x: event.clientX,
                           y: event.clientY,
                           name: rep?.name,
@@ -209,7 +209,7 @@ export default function DistrictMap({
                             ? {
                               ...current,
                               x: event.clientX,
-                              y: event.clientY,
+                              y: event.pageY,
                             }
                             : current
                         );
@@ -263,28 +263,66 @@ export default function DistrictMap({
               }
             </Geographies>
           </ComposableMap>
-          <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-600">
-            <span className="flex items-center gap-2">
-              <span className="flex items-center gap-2">
-              <span className="h-4 w-4 rounded-full bg-red-600" />
-              Republican
-            </span>
-              <span className="h-4 w-4 rounded-full bg-blue-600" />
-              Democratic
-            </span>
-            
-            <span className="flex items-center gap-2">
-              <span className="h-4 w-4 rounded-full bg-purple-600" />
-              Independent
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-4 w-4 rounded-full bg-gray-500" />
-              Vacant
-            </span>
-            
+          {hoveredDistrict && (
+            <div
+              className="pointer-events-none fixed z-[9999] rounded-lg border border-white/10 bg-slate-900/95 px-3 py-2 text-xs text-green-400 shadow-xl backdrop-blur transition-opacity duration-150 opacity-100"
+              style={{
+                left: hoveredDistrict.x + 14,
+                top: Math.max(10, hoveredDistrict.y - 190)
+              }}
+            >
+              <p className="font-semibold">
+                District {hoveredDistrict.district}
+              </p>
+
+              {hoveredDistrict.name && (
+                <p className="mt-1 text-white">
+                  {hoveredDistrict.name}
+                </p>
+              )}
+
+              <p className="mt-1 text-[10px] uppercase tracking-wide">
+                <span
+                  className={
+                    hoveredDistrict.party === "Democrat"
+                      ? "text-blue-400"
+                      : hoveredDistrict.party === "Republican"
+                        ? "text-red-400"
+                        : hoveredDistrict.party === "Independent"
+                          ? "text-purple-400"
+                          : "text-slate-400"
+                  }
+                >
+                  {hoveredDistrict.party ?? "Unknown"}
+                </span>
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-600">
+          <span className="flex items-center gap-2">
+            <span className="h-4 w-4 rounded-full bg-red-600" />
+            Republican
+          </span>
+
+          <span className="flex items-center gap-2">
+            <span className="h-4 w-4 rounded-full bg-blue-600" />
+            Democratic
+          </span>
+
+          <span className="flex items-center gap-2">
+            <span className="h-4 w-4 rounded-full bg-purple-600" />
+            Independent
+          </span>
+
+          <span className="flex items-center gap-2">
+            <span className="h-4 w-4 rounded-full bg-gray-500" />
+            Vacant
+          </span>
+        </div>
           </div>
         </div>
-      </div>
-    </div>
+      
+    
   );
 }

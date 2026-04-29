@@ -192,8 +192,15 @@ export const federalData = {
             servedsince: "January 3, 2017"
         },
         {
-            name: "Chuck Schumer",
+            name: "John Thune",
             role: "Senate Majority Leader",
+            party: "Republican",
+            image: "/images/fed/thune.jpg",
+            servedsince: "January 3, 2005"
+        },
+        {
+            name: "Chuck Schumer",
+            role: "Senate Minority Leader",
             party: "Democratic",
             image: "/images/fed/schumer.jpg",
             servedsince: "January 3, 1999"

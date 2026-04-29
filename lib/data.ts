@@ -1594,7 +1594,7 @@ pennsylvania: {
       website: "https://hayes.house.gov/",
       contactUrl: "https://hayes.house.gov/contact",
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Jahana_Hayes%2C_official_portrait%2C_116th_Congress.jpg",
-    },
+    }
   ],
 },
 "rhode-island": {
@@ -7305,7 +7305,7 @@ pennsylvania: {
       stateSlug: "arizona",
       chamber: "house",
       district: "1st District",
-      party: "Republcian",
+      party: "Republican",
       website: "https://schweikert.house.gov/",
       contactUrl: "https://schweikert.house.gov/contact",
       photoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Schweikert_official_portrait_116th_Congress.jpg",

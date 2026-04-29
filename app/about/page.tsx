@@ -29,7 +29,7 @@ const features = [
     title: "State Profiles",
     description:
       "Each state page includes core information such as capital, population, area, statehood, and state flag.",
-    icon: Flag,
+    icon: Globe,
   },
   {
     title: "Government Directory",
@@ -41,7 +41,7 @@ const features = [
     title: "Civic Discovery",
     description:
       "The app is built to make it easier for people to understand who represents them and learn more about the states.",
-    icon: Users,
+    icon: Flag,
   },
 ];
 
@@ -95,14 +95,14 @@ export default function AboutPage() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/"
-              className="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+              className="inline-flex items-center rounded-xl bg-green-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-green-900"
             >
               Explore the Map
             </Link>
 
             <Link
               href="/states"
-              className="inline-flex items-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+              className="inline-flex items-center rounded-xl border border-slate-300 bg-amber-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-amber-700"
             >
               Browse States
             </Link>
@@ -118,7 +118,7 @@ export default function AboutPage() {
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
             Making civic information easier to understand
           </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-slate-200">
             Government information is often public, but not always easy to
             browse. This project brings together state-level details and public
             officeholder information in one place, using a map-first experience
@@ -238,7 +238,7 @@ export default function AboutPage() {
           <h2 className="mt-2 text-3xl font-bold tracking-tight">
             Informational, not official
           </h2>
-          <p className="mt-4 leading-7 text-slate-300">
+          <p className="mt-4 leading-7 text-slate-200">
             This project is intended as an informational reference tool. While
             it may present public-facing civic and government information, it is
             not an official government website.

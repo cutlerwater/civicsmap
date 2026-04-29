@@ -70,10 +70,10 @@ export default function ContactPage() {
                   Replace this with your real contact email
                 </p>
                 <a
-                  href="cutlerwater2@live.com"
-                  className="mt-2 inline-block text-sm font-medium text-blue-700 hover:text-blue-800"
+                  href="mailto:cutlerwater2@live.com?subject=Civics%20Map%20Inquiry"
+                  className="inline-flex rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-400"
                 >
-                  you@example.com
+                  Email Me (coming soon!)
                 </a>
               </div>
             </div>
@@ -90,6 +90,12 @@ export default function ContactPage() {
                   Suggestions for new features, missing information, UI
                   improvements, or corrections are always helpful.
                 </p>
+                <a
+                  href="mailto:cutlerwater2@live.com?subject=Civics%20Map%20Inquiry"
+                  className="inline-flex rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-400"
+                >
+                  Feeback (coming soon!)
+                </a>
               </div>
             </div>
 
