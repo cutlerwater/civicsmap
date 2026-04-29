@@ -8,10 +8,7 @@ export default function StateSelector() {
 
   return (
     <div className="w-full max-w-sm">
-      <label
-        htmlFor="state-select"
-        className="mb-2 block text-sm font-medium text-slate-700"
-      >
+      <label className="mb-1 block text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
         Select a state
       </label>
 

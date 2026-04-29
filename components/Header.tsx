@@ -9,8 +9,8 @@ export default function Header() {
           <Image
             src="/images/CutlerwaterCivicsMapLogo.png"
             alt="Cutlerwater Civics Map"
-            width={220}
-            height={72}
+            width={200}
+            height={62}
             priority
             className="h-auto w-[180px] md:w-[220px]"
           />

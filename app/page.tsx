@@ -59,8 +59,8 @@ export default function Home() {
                     Interactive Civics Map
                   </h2>
                 </div>
-
-                <div className="hidden rounded-full border border-white/10 bg-black/5 px-3 py-1 text-xs font-medium text-blue-700 md:block">
+                
+                <div className="hidden rounded-full border border-white/10 bg-black/5 px-2 py-1 text-xs font-medium text-blue-700 md:block">
                   Select a state
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Home() {
                     Find representation by ZIP code
                   </h3>
                 </div>
-
+                
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                   <ZipLookup />
                 </div>
