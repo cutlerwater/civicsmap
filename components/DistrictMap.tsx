@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import type { MouseEvent } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -191,7 +192,7 @@ export default function DistrictMap({
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      onMouseEnter={(event) => {
+                      onMouseEnter={(event: MouseEvent<SVGPathElement>) => {
                         if (!district) return;
 
                         setHoveredDistrict({
@@ -199,10 +200,10 @@ export default function DistrictMap({
                           x: event.clientX,
                           y: event.clientY,
                           name: rep?.name,
-                          party: rep?.party,
+                          party: rep?.party ?? "Vacant",
                         });
                       }}
-                      onMouseMove={(event) => {
+                      onMouseMove={(event: MouseEvent<SVGPathElement>) => {
                         setHoveredDistrict((current) =>
                           current
                             ? {
