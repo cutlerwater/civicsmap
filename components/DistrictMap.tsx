@@ -31,6 +31,10 @@ type Representative = {
   party?: string | null;
 };
 
+type GeographiesRenderProps = {
+  geographies: GeographyFeature[];
+};
+
 type Props = {
   geoUrl: string;
   title?: string;
@@ -53,8 +57,8 @@ const PARTY_COLORS: Record<string, string> = {
   Independent: "#9333ea",
   I: "#9333ea",
 
-  Vacant: "#737373",
-  Vacancy: "#737373",
+  Vacant: "#6b7280",
+  Vacancy: "#6b7280",
 };
 
 function getPartyColor(party?: string | null) {
@@ -168,9 +172,9 @@ export default function DistrictMap({
             className="h-auto w-full"
           >
             <Geographies geography={geoUrl}>
-              {({ geographies }) =>
+              {({ geographies }: GeographiesRenderProps) =>
                 geographies.map((geo) => {
-                  // 👇 PUT IT RIGHT HERE (inside map, before return)
+                  
 
                   const district = getDistrictFromProperties(geo.properties);
                   const isValidDistrict = !!district && district !== "0";
