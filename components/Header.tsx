@@ -24,9 +24,6 @@ export default function Header() {
           <Link href="/federal" className="hover:text-sky-300">
             Federal
           </Link>
-          <Link href="/" className="transition hover:text-white">
-            States
-          </Link>
           <Link href="/about" className="transition hover:text-white">
             About
           </Link>
