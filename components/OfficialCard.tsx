@@ -149,7 +149,7 @@ export default function OfficialCard({
         </div>
 
         <div className="min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
             {official.role || "Congress"}
           </p>
 
@@ -164,14 +164,14 @@ export default function OfficialCard({
           <div className="mt-2 flex flex-wrap gap-2">
             {partyLabel && (
               <span
-                className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ring-1 ${partyStyles}`}
+                className={`inline-flex rounded-full px-3 py-1 text-sm font-bold ring-3 ${partyStyles}`}
               >
                 {partyLabel}
               </span>
             )}
 
             {official.district && (
-              <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">
+              <span className="inline-flex rounded-full bg-slate-200 px-3 py-1 text-xs font-bold text-slate-700 ring-3 ring-slate-500">
                 {official.district}
               </span>
             )}
@@ -179,7 +179,7 @@ export default function OfficialCard({
         </div>
       </div>
       {official.title && (
-        <p className="mt-1 text-sm font-extrabold text-slate-500">
+        <p className="mt-1 text-sm font-extrabold text-slate-700">
           {official.title}
         </p>
       )}

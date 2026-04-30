@@ -337,7 +337,7 @@ export default function StatePage() {
       <div className="mb-6">
         <Link
           href="/"
-          className="text-sm font-medium text-blue-700 hover:text-blue-900"
+          className="text-lg font-semibold text-slate-300 hover:text-red-500"
         >
           ← Back to map
         </Link>
@@ -517,10 +517,10 @@ export default function StatePage() {
 
       <section className="mt-12">
         <div className="mb-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
+          <p className="text-lg font-bold uppercase tracking-[0.2em] text-blue-500">
             Elected Officials
           </p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
+          <h2 className="mt-2 text-xl font-bold tracking-tight text-slate-400">
             State Leadership
           </h2>
         </div>
@@ -553,7 +553,7 @@ export default function StatePage() {
               U.S. Representatives
             </h3>
 
-            <p className="mb-4 text-sm text-slate-600">
+            <p className="mb-4 text-md text-red-300">
               Selected district : {selectedDistrict ?? "none"} (if you press on a box twice, you will be directed towards the congressional map automatically)
             </p>
 
