@@ -8,10 +8,21 @@ export type Official = {
   stateSlug: string;
   party?: string;
   district?: string;
-  chamber: "executive" | "senate" | "house";
+  chamber: "executive" | "senate" | "house" | "Judicial";
   photoUrl?: string;
   website?: string;
   contactUrl?: string;
+  officeaddress?: string,
+  assumedoffice?: string,
+  predecessor?: string,
+  born?: string,
+  college?: string,
+  phone?: string,
+  level?: string,
+  serveswith?: string,
+  committees?: string,
+  previousoffices?: string,
+  military?: string,
 
 };
 
