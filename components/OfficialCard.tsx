@@ -9,7 +9,12 @@ type Official = {
   website?: string;
   phone?: string;
   office?: string;
-};
+  title?: string;
+  state?: string;
+  assumedOffice?: string;
+  officeAddress?: string;
+  born?: string;
+  };
 
 type OfficialCardProps = {
   official: Official;
@@ -110,6 +115,7 @@ export default function OfficialCard({
                 </a>
               </div>
             )}
+            
           </div>
         </div>
       </article>
@@ -144,7 +150,7 @@ export default function OfficialCard({
 
         <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
-            {official.role || "Official"}
+            {official.role || "Congress"}
           </p>
 
           <h3
@@ -172,7 +178,22 @@ export default function OfficialCard({
           </div>
         </div>
       </div>
-
+      {official.title && (
+        <p className="mt-1 text-sm font-extrabold text-slate-500">
+          {official.title}
+        </p>
+      )}
+      {official.state && (
+        <p className="mt-1 text-md font-bold text-slate-500">
+          {official.state}
+        </p>
+      )}
+      
+      {official.born && (
+        <p className="mt-1 text-sm font-medium text-slate-700">
+          <strong>Born: </strong> {official.born}
+        </p>
+      )}
       <div className="mt-6 space-y-4">
         {official.office && <InfoRow label="Office" value={official.office} />}
 
@@ -191,6 +212,8 @@ export default function OfficialCard({
             </a>
           </div>
         )}
+        
+        
       </div>
     </article>
   );
